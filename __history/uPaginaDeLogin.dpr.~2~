@@ -1,0 +1,14 @@
+program uPaginaDeLogin;
+
+uses
+  Vcl.Forms,
+  uLogin in '..\..\Documents\Embarcadero\Studio\Projects\uLogin.pas' {FormLoginProfessorOuAluno};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormLoginProfessorOuAluno, FormLoginProfessorOuAluno);
+  Application.Run;
+end.
