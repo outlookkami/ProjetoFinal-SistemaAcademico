@@ -127,7 +127,7 @@
             <Form>FormLoginProfessorOuAluno</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uTeste.pas">
+        <DCCReference Include="uPáginaTurmas.pas">
             <Form>formPaginaInicial</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -135,6 +135,16 @@
             <Form>DataModule2</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uProfessor.pas"/>
+        <DCCReference Include="uAluno.pas"/>
+        <DCCReference Include="uCadastro.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uPáginaMatrículas.pas">
+            <Form>formPáginaMatrículas</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

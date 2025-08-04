@@ -1,0 +1,25 @@
+unit uTurma;
+
+interface
+    type TTurma = class
+
+     private
+     var  CodigoTurma: String;
+//          CodigoProfessor: String;
+//          CodigoDisciplina: String;
+
+     procedure SetCodigoTurma(const Value: String);
+
+     public
+     property Codigo: String read FCodigo write SetCodigo;
+
+implementation
+
+    {$R *.dfm}
+
+procedure TTurma.SetCodigo(const Value: String) ;
+begin
+  FCodigo := Value;
+end;
+
+end.

@@ -81,7 +81,7 @@ object formPaginaInicial: TformPaginaInicial
     end
     object StrGridTurmas: TStringGrid
       Left = 48
-      Top = 232
+      Top = 216
       Width = 332
       Height = 137
       TabOrder = 3

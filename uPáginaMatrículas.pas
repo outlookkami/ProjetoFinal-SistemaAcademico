@@ -1,0 +1,39 @@
+unit uPáginaMatrículas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.ExtCtrls, uAluno, uTurma;
+
+type
+  TformPáginaMatrículas = class(TForm)
+    pnlTurmas: TPanel;
+    lblPagInicial: TLabel;
+    lblMatrículas: TLabel;
+    lblCodigoMatrícula: TLabel;
+    lblCodigoAlunoMatr: TLabel;
+    lblCodigoTurmaMatr: TLabel;
+    edtPesquisaCodigoTurma: TEdit;
+    edtPesquisaTurmaCodProf: TEdit;
+    edtPesquisaTurmaCodDisc: TEdit;
+    DBGrid1: TDBGrid;
+    procedure lblMatrículasClick(Sender: TObject);
+    procedure lblCodigoAlunoMatrClick(Sender: TObject);
+    procedure lblCodigoTurmaMatrClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formPáginaMatrículas: TformPáginaMatrículas;
+
+implementation
+
+{$R *.dfm}
+
+
+end.

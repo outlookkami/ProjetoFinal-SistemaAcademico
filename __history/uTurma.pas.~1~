@@ -1,0 +1,17 @@
+unit uTurma;
+
+interface
+
+implementation
+     type TTurma = class
+
+     private
+     var  CodigoTurma: String;
+          CodigoProfessor: String;
+          CodigoDisciplina: String;
+
+     procedure
+
+
+     end;
+end.

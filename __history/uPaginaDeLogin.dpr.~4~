@@ -3,12 +3,11 @@ program uPaginaDeLogin;
 uses
   Vcl.Forms,
   uLogin in '..\..\Documents\Embarcadero\Studio\Projects\uLogin.pas' {FormLoginProfessorOuAluno},
-  uPáginaTurmas in 'uPáginaTurmas.pas' {formPaginaInicial},
+  uTeste in 'uTeste.pas' {formPaginaInicial},
   uTest in 'uTest.pas' {DataModule2: TDataModule},
+  uTurma in 'uTurma.pas',
   uProfessor in 'uProfessor.pas',
-  uAluno in 'uAluno.pas',
-  uCadastro in 'uCadastro.pas' {Form1},
-  uPáginaMatrículas in 'uPáginaMatrículas.pas' {formPáginaMatrículas};
+  uAluno in 'uAluno.pas';
 
 {$R *.res}
 
@@ -18,7 +17,5 @@ begin
   Application.CreateForm(TFormLoginProfessorOuAluno, FormLoginProfessorOuAluno);
   Application.CreateForm(TformPaginaInicial, formPaginaInicial);
   Application.CreateForm(TDataModule2, DataModule2);
-  Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TformPáginaMatrículas, formPáginaMatrículas);
   Application.Run;
 end.

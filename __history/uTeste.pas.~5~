@@ -34,7 +34,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TFormPaginaInicial.FormCreate(Sender: TObject);
+procedure TformPaginaInicialFormCreate(Sender: TObject);
 begin
      StrGridTurmas.ColCount := 4;
      StrGridTurmas.RowCount := 3;

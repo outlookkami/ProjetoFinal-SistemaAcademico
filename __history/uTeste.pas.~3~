@@ -34,10 +34,10 @@ implementation
 
 {$R *.dfm}
 
-procedure TFormPaginaInicial.FormCreate(Sender: TObject);
+procedure TformPaginaInicial.FormCreate(Sender: TObject);
 begin
      StrGridTurmas.ColCount := 4;
-     StrGridTurmas.RowCount := 3;
+     StrGridTurmas.RowCount := Turma.Count;
 
      StrGridTurmas.Cells[0,0] := 'Turmas'
      StrGridTurmas.Cells[1,0] := 'Código da Turma';
@@ -47,17 +47,17 @@ begin
 
 end;
 
-//procedure TformPaginaInicial.StrGridTurmasClick(Sender: TObject);
-//begin
-//     StrGridTurmas.ColCount := 4;
-//     StrGridTurmas.RowCount := Turma.Count;
-//
-//     StrGridTurmas.Cells[0,0] := 'Turmas'
-//     StrGridTurmas.Cells[1,0] := 'Código da Turma';
-//     StrGridTurmas.Cells[2,0] := 'Código do Professor';
-//     StrGridTurmas.Cells[3,0] := 'Código da Disciplina';
-//
-//
-//end;
+procedure TformPaginaInicial.StrGridTurmasClick(Sender: TObject);
+begin
+     StrGridTurmas.ColCount := 4;
+     StrGridTurmas.RowCount := Turma.Count;
+
+     StrGridTurmas.Cells[0,0] := 'Turmas'
+     StrGridTurmas.Cells[1,0] := 'Código da Turma';
+     StrGridTurmas.Cells[2,0] := 'Código do Professor';
+     StrGridTurmas.Cells[3,0] := 'Código da Disciplina';
+
+
+end;
 
 end.

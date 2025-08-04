@@ -1,9 +1,9 @@
-object formPaginaInicial: TformPaginaInicial
+﻿object formPáginaMatrículas: TformPáginaMatrículas
   Left = 0
   Top = 0
-  Caption = 'P'#225'gina Inicial - Turmas'
-  ClientHeight = 565
-  ClientWidth = 833
+  Caption = 'P'#225'gina de Matr'#237'culas'
+  ClientHeight = 551
+  ClientWidth = 703
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,8 +12,8 @@ object formPaginaInicial: TformPaginaInicial
   Font.Style = []
   TextHeight = 15
   object pnlTurmas: TPanel
-    Left = 88
-    Top = 40
+    Left = 22
+    Top = 32
     Width = 673
     Height = 489
     TabOrder = 0
@@ -30,33 +30,36 @@ object formPaginaInicial: TformPaginaInicial
       Font.Style = []
       ParentFont = False
     end
-    object lblTurmas: TLabel
+    object lblMatrículas: TLabel
       Left = 50
       Top = 72
-      Width = 40
+      Width = 55
       Height = 15
-      Caption = 'Turmas'
+      Caption = 'Matr'#237'culas'
+      OnClick = lblMatrículasClick
     end
-    object lblCodigoTurma: TLabel
+    object lblCodigoMatrícula: TLabel
       Left = 48
       Top = 109
       Width = 42
       Height = 15
       Caption = 'C'#243'digo:'
     end
-    object lblCodigoProfessor: TLabel
+    object lblCodigoAlunoMatr: TLabel
       Left = 48
       Top = 139
-      Width = 111
+      Width = 114
       Height = 15
-      Caption = 'C'#243'digo do Professor:'
+      Caption = 'C'#243'digo do Estudante:'
+      OnClick = lblCodigoAlunoMatrClick
     end
-    object lblCodigoDisciplina: TLabel
+    object lblCodigoTurmaMatr: TLabel
       Left = 48
       Top = 168
-      Width = 112
+      Width = 96
       Height = 15
-      Caption = 'C'#243'digo da Disciplina:'
+      Caption = 'C'#243'digo da Turma:'
+      OnClick = lblCodigoTurmaMatrClick
     end
     object edtPesquisaCodigoTurma: TEdit
       Left = 96
@@ -66,26 +69,30 @@ object formPaginaInicial: TformPaginaInicial
       TabOrder = 0
     end
     object edtPesquisaTurmaCodProf: TEdit
-      Left = 176
+      Left = 168
       Top = 136
       Width = 185
       Height = 23
       TabOrder = 1
     end
     object edtPesquisaTurmaCodDisc: TEdit
-      Left = 176
+      Left = 150
       Top = 165
       Width = 185
       Height = 23
       TabOrder = 2
     end
-    object StrGridTurmas: TStringGrid
-      Left = 48
-      Top = 232
-      Width = 332
-      Height = 137
+    object DBGrid1: TDBGrid
+      Left = 50
+      Top = 224
+      Width = 575
+      Height = 241
       TabOrder = 3
-      OnClick = StrGridTurmasClick
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
     end
   end
 end

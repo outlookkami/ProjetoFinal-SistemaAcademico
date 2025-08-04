@@ -1,11 +1,11 @@
-unit uTeste;
+unit uPáginaTurmas;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.Grids, uTurma;
+  Vcl.Grids, uTurma, Data.FMTBcd, Data.DB, Data.SqlExpr, Vcl.DBGrids;
 
 type
   TformPaginaInicial = class(TForm)
@@ -18,7 +18,7 @@ type
     edtPesquisaCodigoTurma: TEdit;
     edtPesquisaTurmaCodProf: TEdit;
     edtPesquisaTurmaCodDisc: TEdit;
-    StrGridTurmas: TStringGrid;
+    DBGrid1: TDBGrid;
     procedure StrGridTurmasClick(Sender: TObject);
   private
     { Private declarations }
@@ -34,7 +34,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TFormPaginaInicial.FormCreate(Sender: TObject);
+procedure TformPaginaInicial.FormCreate(Sender: TObject);
 begin
      StrGridTurmas.ColCount := 4;
      StrGridTurmas.RowCount := 3;

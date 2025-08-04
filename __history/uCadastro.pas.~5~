@@ -1,0 +1,52 @@
+unit uCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, uLogin;
+
+type
+  TForm1 = class(TForm)
+    pnlInicio: TPanel;
+    lblSouProfessor: TLabel;
+    lblSouAluno: TLabel;
+    lblRedirecionamentoCadParaLogin: TLabel;
+    pnlLoginAluno: TPanel;
+    lblNomeAluno: TLabel;
+    lblCodigoTurmaCadAluno: TLabel;
+    edtNomeAluno: TEdit;
+    edtCodigoTurmaCadAluno: TEdit;
+    pnlLoginProf: TPanel;
+    lblNomeProf: TLabel;
+    lblCodigoDiscCadProf: TLabel;
+    lblCPF: TLabel;
+    edtNomeProfessor: TEdit;
+    edtCodigoProfessor: TEdit;
+    MaskEdit1: TMaskEdit;
+    btnCadastrarAluno: TButton;
+    btnCadastrarProfessor: TButton;
+    procedure lblRedirecionamentoCadParaLoginClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses uLogin;
+
+
+
+procedure TForm1.lblRedirecionamentoCadParaLoginClick(Sender: TObject);
+begin
+    FormLoginProfessorOuAluno.Show;
+end;
+
+end.
