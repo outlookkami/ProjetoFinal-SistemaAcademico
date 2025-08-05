@@ -15,6 +15,8 @@ type
   TDataModule2 = class(TDataModule)
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
+    procedure FDPhysPgDriverLink1DriverCreated(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +31,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule2.FDPhysPgDriverLink1DriverCreated(Sender: TObject);
+begin
+
+end;
 
 end.
