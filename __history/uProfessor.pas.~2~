@@ -5,9 +5,6 @@ interface
           CodigoProfessor: String;
           NomeProfessor: String;
           CPF: String;
-          procedure ApagarProfessor;
-          procedure IncluirProfessor;
-          procedure AtualizarProfessor;
 implementation
 
 end.
