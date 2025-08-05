@@ -10,10 +10,19 @@ object DataModule2: TDataModule2
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=postgres'
+      'Database=CrudDB'
       'User_Name=postgres'
+      'Server=localhost'
+      'Password=root'
       'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
     Left = 120
     Top = 128
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 120
+    Top = 200
   end
 end

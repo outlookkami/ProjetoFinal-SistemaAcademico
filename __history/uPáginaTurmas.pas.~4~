@@ -1,15 +1,14 @@
-unit uP谩ginaTurmas;
+unit uP醙inaTurmas;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.Grids, uTurma, Data.FMTBcd, Data.DB, Data.SqlExpr, Vcl.DBGrids,
-  Vcl.Buttons;
+  Vcl.Grids, uTurma, Data.FMTBcd, Data.DB, Data.SqlExpr, Vcl.DBGrids;
 
 type
-  TTurmas = class(TForm)
+  TformPaginaInicial = class(TForm)
     pnlTurmas: TPanel;
     lblPagInicial: TLabel;
     lblTurmas: TLabel;
@@ -20,14 +19,8 @@ type
     edtPesquisaTurmaCodProf: TEdit;
     edtPesquisaTurmaCodDisc: TEdit;
     DBGrid1: TDBGrid;
-    SpeedButton1: TSpeedButton;
-
-
     procedure StrGridTurmasClick(Sender: TObject);
-    private
-          procedure ApagarTurma;
-          procedure IncluirTurma;
-          procedure AtualizarTurma;
+  private
     { Private declarations }
 
   public
@@ -35,7 +28,7 @@ type
   end;
 
 var
-  Turmas: TTurmas;
+  formPaginaInicial: TformPaginaInicial;
 
 implementation
 
@@ -47,9 +40,9 @@ implementation
 //     StrGridTurmas.RowCount := 3;
 //
 //     StrGridTurmas.Cells[0,0] := 'Turmas'
-//     StrGridTurmas.Cells[1,0] := 'C贸digo da Turma';
-//     StrGridTurmas.Cells[2,0] := 'C贸digo do Professor';
-//     StrGridTurmas.Cells[3,0] := 'C贸digo da Disciplina';
+//     StrGridTurmas.Cells[1,0] := 'C骴igo da Turma';
+//     StrGridTurmas.Cells[2,0] := 'C骴igo do Professor';
+//     StrGridTurmas.Cells[3,0] := 'C骴igo da Disciplina';
 //
 //
 //end;
@@ -60,21 +53,11 @@ implementation
 //     StrGridTurmas.RowCount := Turma.Count;
 //
 //     StrGridTurmas.Cells[0,0] := 'Turmas'
-//     StrGridTurmas.Cells[1,0] := 'C贸digo da Turma';
-//     StrGridTurmas.Cells[2,0] := 'C贸digo do Professor';
-//     StrGridTurmas.Cells[3,0] := 'C贸digo da Disciplina';
+//     StrGridTurmas.Cells[1,0] := 'C骴igo da Turma';
+//     StrGridTurmas.Cells[2,0] := 'C骴igo do Professor';
+//     StrGridTurmas.Cells[3,0] := 'C骴igo da Disciplina';
 //
 //
 //end;
-
-procedure TTurmas.rdbProdClick(Sender:TObject);
-begin
-     dbProj.DataSource := TurmasDB;
-end;
-
-procedure TTurmas.btnApagarTurmaClick(Sender: TObject);
-begin
-//    listaTurmas.DeleteSelected;
-end;
 
 end.

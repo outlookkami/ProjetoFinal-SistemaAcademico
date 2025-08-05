@@ -15,6 +15,7 @@ type
   TDataModule2 = class(TDataModule)
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
   private
     { Private declarations }
   public

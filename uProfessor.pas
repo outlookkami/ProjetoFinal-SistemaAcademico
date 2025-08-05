@@ -10,4 +10,6 @@ interface
           procedure AtualizarProfessor;
 implementation
 
+procedure TProfessor.btnApagarProfessor
+
 end.

@@ -1,8 +1,8 @@
-object formPaginaInicial: TformPaginaInicial
+object Turmas: TTurmas
   Left = 0
   Top = 0
   Caption = 'P'#225'gina Inicial - Turmas'
-  ClientHeight = 565
+  ClientHeight = 666
   ClientWidth = 833
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,12 @@ object formPaginaInicial: TformPaginaInicial
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
+  object SpeedButton1: TSpeedButton
+    Left = 16
+    Top = 8
+    Width = 689
+    Height = 569
+  end
   object pnlTurmas: TPanel
     Left = 24
     Top = 32
@@ -80,7 +86,7 @@ object formPaginaInicial: TformPaginaInicial
       TabOrder = 2
     end
     object DBGrid1: TDBGrid
-      Left = 50
+      Left = 34
       Top = 225
       Width = 575
       Height = 240

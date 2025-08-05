@@ -128,10 +128,10 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uPáginaTurmas.pas">
-            <Form>formPaginaInicial</Form>
+            <Form>Turmas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uTest.pas">
+        <DCCReference Include="uConexãoBancoPG.pas">
             <Form>DataModule2</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
@@ -144,6 +144,10 @@
         </DCCReference>
         <DCCReference Include="uPáginaMatrículas.pas">
             <Form>formPáginaMatrículas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uProfessorVCL.pas">
+            <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

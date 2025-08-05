@@ -5,10 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.Grids, uTurma, Data.FMTBcd, Data.DB, Data.SqlExpr, Vcl.DBGrids;
+  Vcl.Grids, uTurma, Data.FMTBcd, Data.DB, Data.SqlExpr, Vcl.DBGrids,
+  Vcl.Buttons;
 
 type
-  TformPaginaInicial = class(TForm)
+  TTurmas = class(TForm)
     pnlTurmas: TPanel;
     lblPagInicial: TLabel;
     lblTurmas: TLabel;
@@ -19,8 +20,14 @@ type
     edtPesquisaTurmaCodProf: TEdit;
     edtPesquisaTurmaCodDisc: TEdit;
     DBGrid1: TDBGrid;
+    SpeedButton1: TSpeedButton;
+
+
     procedure StrGridTurmasClick(Sender: TObject);
-  private
+    private
+          procedure ApagarTurma;
+          procedure IncluirTurma;
+          procedure AtualizarTurma;
     { Private declarations }
 
   public
@@ -28,7 +35,7 @@ type
   end;
 
 var
-  formPaginaInicial: TformPaginaInicial;
+  Turmas: TTurmas;
 
 implementation
 
@@ -59,5 +66,15 @@ implementation
 //
 //
 //end;
+
+procedure TTurmas.rdbProdClick(Sender:TObject);
+begin
+     dbProj.DataSource := TurmasDB;
+end;
+
+procedure TTurmas.btnApagarTurmaClick(Sender: TObject);
+begin
+//    listaTurmas.DeleteSelected;
+end;
 
 end.
