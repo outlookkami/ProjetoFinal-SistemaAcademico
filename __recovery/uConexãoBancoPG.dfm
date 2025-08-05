@@ -13,7 +13,6 @@ object DataModule2: TDataModule2
     Params.Strings = (
       'Database=postgres'
       'User_Name=postgres'
-      'Password=root'
       'Server=localhost'
       'DriverID=PG')
     LoginPrompt = False
