@@ -14,7 +14,7 @@ object TurmasPage: TTurmasPage
   TextHeight = 15
   object pnlTurmas: TPanel
     Left = 168
-    Top = 80
+    Top = 74
     Width = 785
     Height = 753
     Caption = 'C'#243'digo do Professor'

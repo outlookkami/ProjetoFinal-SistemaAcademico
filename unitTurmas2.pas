@@ -53,8 +53,8 @@ type
 
     var TurmasPage: TTurmasPage;
 //    codigoTurma: String;
-//    codigoDisciplina: String; //Vai receber o cÃ³digo do Disciplina da uDisciplina
-//    codigoProfessor: String; //Vai receber o cÃ³digo do Professor da uProfessor
+//    codigoDisciplina: String; //Vai receber o código do Disciplina da uDisciplina
+//    codigoProfessor: String; //Vai receber o código do Professor da uProfessor
 
   private
     { Private declarations }

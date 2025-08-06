@@ -79,4 +79,8 @@ __recovery/
 *.stat
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
+<<<<<<< HEAD
 modules/
+=======
+modules/
+>>>>>>> 5190359 (Mudança de branch)
