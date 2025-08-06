@@ -60,15 +60,11 @@ type
     { Public declarations }
   end;
 
-
+  var TurmasPage:TTurmasPage;
 
 implementation
 
 {$R *.dfm}
-
-
-
-
 
 procedure TTurmasPage.FormCreate(Sender: TObject);
 begin
