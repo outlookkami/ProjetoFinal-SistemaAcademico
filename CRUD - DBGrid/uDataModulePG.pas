@@ -17,6 +17,9 @@ type
     QueryTurmas: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     dsTurmas: TDataSource;
+    QueryTurmascodigo_turma: TStringField;
+    QueryTurmascodigo_disciplina: TStringField;
+    QueryTurmascodigo_professor: TStringField;
   private
     { Private declarations }
   public
