@@ -13,31 +13,18 @@ object TurmasPage: TTurmasPage
   OnCreate = FormCreate
   TextHeight = 15
   object pnlTurmas: TPanel
-    Left = 168
-    Top = 74
-    Width = 785
-    Height = 753
+    Left = 208
+    Top = 0
+    Width = 801
+    Height = 681
     Caption = 'C'#243'digo do Professor'
     TabOrder = 0
-    object lblTituloBemVindo: TLabel
-      Left = 336
-      Top = 24
-      Width = 92
+    object lblTituloTurma: TLabel
+      Left = 376
+      Top = 16
+      Width = 54
       Height = 25
-      Caption = 'Bem-vindo'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -19
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object lblTituloTurmas: TLabel
-      Left = 34
-      Top = 72
-      Width = 62
-      Height = 25
-      Caption = 'Turmas'
+      Caption = 'Turma'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -92,22 +79,22 @@ object TurmasPage: TTurmasPage
       FocusControl = DBEdit6
     end
     object lblCodigoTurmInclu: TLabel
-      Left = 48
-      Top = 576
+      Left = 69
+      Top = 490
       Width = 93
       Height = 15
       Caption = 'C'#243'digo da turma:'
     end
     object lblCodigoDiscInclu: TLabel
-      Left = 48
-      Top = 613
+      Left = 70
+      Top = 527
       Width = 111
       Height = 15
       Caption = 'C'#243'digo da disciplina:'
     end
     object lblCodigoProfInclu: TLabel
-      Left = 48
-      Top = 650
+      Left = 70
+      Top = 564
       Width = 114
       Height = 15
       Caption = 'C'#243'digo do professor: '
@@ -134,8 +121,8 @@ object TurmasPage: TTurmasPage
       TabOrder = 2
     end
     object DBGrid1: TDBGrid
-      Left = 34
-      Top = 268
+      Left = 66
+      Top = 151
       Width = 655
       Height = 285
       Cursor = crHandPoint
@@ -168,8 +155,8 @@ object TurmasPage: TTurmasPage
         end>
     end
     object RedTurmaEstud: TPanel
-      Left = 26
-      Top = 699
+      Left = 586
+      Top = 448
       Width = 129
       Height = 33
       Caption = 'Estudantes'
@@ -178,8 +165,8 @@ object TurmasPage: TTurmasPage
       TabOrder = 4
     end
     object RedTurmaMatri: TPanel
-      Left = 203
-      Top = 700
+      Left = 586
+      Top = 488
       Width = 129
       Height = 33
       Caption = 'Matr'#237'culas'
@@ -188,8 +175,8 @@ object TurmasPage: TTurmasPage
       TabOrder = 5
     end
     object RedTurmaProfs: TPanel
-      Left = 376
-      Top = 700
+      Left = 586
+      Top = 527
       Width = 129
       Height = 33
       Caption = 'Professores'
@@ -198,8 +185,8 @@ object TurmasPage: TTurmasPage
       TabOrder = 6
     end
     object RedTurmaDisci: TPanel
-      Left = 552
-      Top = 700
+      Left = 586
+      Top = 566
       Width = 129
       Height = 33
       Caption = 'Disciplinas'
@@ -208,16 +195,16 @@ object TurmasPage: TTurmasPage
       TabOrder = 7
     end
     object AFazer1: TPanel
-      Left = 34
-      Top = 111
+      Left = 66
+      Top = 47
       Width = 655
       Height = 41
       Caption = 'Barra de Pesquisa (fazer)'
       TabOrder = 8
     end
     object DBNavigator1: TDBNavigator
-      Left = 272
-      Top = 229
+      Left = 66
+      Top = 450
       Width = 180
       Height = 25
       Cursor = crHandPoint
@@ -239,8 +226,8 @@ object TurmasPage: TTurmasPage
       TabOrder = 9
     end
     object pnlBtnTurmas: TPanel
-      Left = 34
-      Top = 192
+      Left = 618
+      Top = 94
       Width = 103
       Height = 33
       Caption = 'Turmas'
@@ -283,27 +270,27 @@ object TurmasPage: TTurmasPage
       DataSource = DataSource1
       TabOrder = 14
     end
-    object DBEditTurmaInclu: TDBEdit
-      Left = 147
-      Top = 573
+    object TDBEdit
+      Left = 168
+      Top = 487
       Width = 121
       Height = 23
       DataField = 'codigo_turma'
       DataSource = DataSource1
       TabOrder = 15
     end
-    object DBEditDiscInc: TDBEdit
-      Left = 165
-      Top = 610
+    object TDBEdit
+      Left = 187
+      Top = 524
       Width = 121
       Height = 23
       DataField = 'codigo_disciplina'
       DataSource = DataSource1
       TabOrder = 16
     end
-    object DBEditProfInc: TDBEdit
-      Left = 168
-      Top = 647
+    object TDBEdit
+      Left = 190
+      Top = 561
       Width = 121
       Height = 23
       DataField = 'codigo_professor'
@@ -312,7 +299,7 @@ object TurmasPage: TTurmasPage
     end
   end
   object DataSource1: TDataSource
-    Left = 744
-    Top = 280
+    Left = 224
+    Top = 544
   end
 end

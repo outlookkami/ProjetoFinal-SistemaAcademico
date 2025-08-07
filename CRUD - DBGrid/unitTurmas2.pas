@@ -16,12 +16,11 @@ var
 type
   TTurmasPage = class(TForm)
     pnlTurmas: TPanel;
-    lblTituloBemVindo: TLabel;
+    lblTituloTurma: TLabel;
     edtPesquisaCodigoTurma: TEdit;
     edtPesquisaTurmaCodProf: TEdit;
     edtPesquisaTurmaCodDisc: TEdit;
     DBGrid1: TDBGrid;
-    lblTituloTurmas: TLabel;
     RedTurmaEstud: TPanel;
     RedTurmaMatri: TPanel;
     RedTurmaProfs: TPanel;
@@ -43,9 +42,6 @@ type
     lblCodigoTurmInclu: TLabel;
     lblCodigoDiscInclu: TLabel;
     lblCodigoProfInclu: TLabel;
-    DBEditTurmaInclu: TDBEdit;
-    DBEditDiscInc: TDBEdit;
-    DBEditProfInc: TDBEdit;
     procedure FormCreate(Sender: TObject);
     procedure pnlBtnTurmasClick(Sender: TObject);
 

@@ -20,6 +20,10 @@ type
     QueryTurmascodigo_turma: TStringField;
     QueryTurmascodigo_disciplina: TStringField;
     QueryTurmascodigo_professor: TStringField;
+    QueryDisciplinas: TFDQuery;
+    QueryEstudantes: TFDQuery;
+    QueryProfessores: TFDQuery;
+    QueryMatrículas: TFDQuery;
   private
     { Private declarations }
   public
