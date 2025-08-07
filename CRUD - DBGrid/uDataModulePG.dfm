@@ -1,13 +1,14 @@
 ﻿object DataModule2: TDataModule2
-  Height = 720
-  Width = 960
-  PixelsPerInch = 144
+  Height = 480
+  Width = 640
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorLib = 
       'C:\Users\Kamilly Souza\Desktop\Projeto Final - Sistema Acad'#234'mico' +
-      '\lib\lib\libpq.dll'
-    Left = 268
-    Top = 80
+      '\Projeto - pull\ProjetoFinal-SistemaAcademico\CRUD - DBGrid\lib\' +
+      'libpq.dll'
+    OnDriverCreated = FDPhysPgDriverLink1DriverCreated
+    Left = 179
+    Top = 53
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -16,16 +17,17 @@
       'Server=localhost'
       'Password=root'
       'DriverID=PG')
+    Connected = True
     LoginPrompt = False
-    Left = 108
-    Top = 80
+    Left = 72
+    Top = 53
   end
   object QueryTurmas: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM turmas;')
-    Left = 100
-    Top = 228
+    Left = 67
+    Top = 152
     object QueryTurmascodigo_turma: TStringField
       FieldName = 'codigo_turma'
       Origin = 'codigo_turma'
@@ -48,32 +50,41 @@
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Console'
-    Left = 452
-    Top = 76
+    OnHide = FDGUIxWaitCursor1Hide
+    Left = 301
+    Top = 51
   end
   object dsTurmas: TDataSource
     DataSet = QueryTurmas
-    Left = 264
-    Top = 408
+    Left = 112
+    Top = 240
   end
   object QueryDisciplinas: TFDQuery
     Connection = FDConnection1
-    Left = 240
-    Top = 232
+    SQL.Strings = (
+      'SELECT * FROM disciplinas;')
+    Left = 160
+    Top = 155
   end
   object QueryEstudantes: TFDQuery
     Connection = FDConnection1
-    Left = 392
-    Top = 232
+    SQL.Strings = (
+      'SELECT * FROM estudantes;')
+    Left = 261
+    Top = 155
   end
   object QueryProfessores: TFDQuery
     Connection = FDConnection1
-    Left = 544
-    Top = 232
+    SQL.Strings = (
+      'SELECT * FROM professores;')
+    Left = 363
+    Top = 155
   end
   object QueryMatrículas: TFDQuery
     Connection = FDConnection1
-    Left = 696
-    Top = 232
+    SQL.Strings = (
+      'SELECT * FROM matriculas;')
+    Left = 464
+    Top = 155
   end
 end
