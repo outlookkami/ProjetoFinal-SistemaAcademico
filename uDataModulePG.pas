@@ -11,15 +11,21 @@ uses
   FireDAC.Comp.Client, FireDAC.Comp.UI, Data.Win.ADODB;
 
 type
-  TDataModule2 = class(TDataModule)
+    TDataModule2 = class(TDataModule)
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDConnection1: TFDConnection;
     QueryTurmas: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    dsTurmas: TDataSource;
     QueryTurmascodigo_turma: TStringField;
     QueryTurmascodigo_disciplina: TStringField;
     QueryTurmascodigo_professor: TStringField;
+    QueryDisciplinas: TFDQuery;
+    QueryEstudantes: TFDQuery;
+    QueryMatrículas: TFDQuery;
+    QueryProfessores: TFDQuery;
+    procedure FDPhysPgDriverLink1DriverCreated(Sender: TObject);
+    //procedure FDPhysPgDriverLink1DriverCreated(Sender: TObject);
+    //procedure FDGUIxWaitCursor1Hide(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,12 +33,14 @@ type
   end;
 
 var
-  DataModule2: TDataModule2;
+  DataModule2: TDataModule;
 
 implementation
 
 {%CLASSGROUP 'System.Classes.TPersistent'}
 
 {$R *.dfm}
+
+
 
 end.

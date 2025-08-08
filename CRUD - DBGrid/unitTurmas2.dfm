@@ -2,8 +2,8 @@ object TurmasPage: TTurmasPage
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 835
-  ClientWidth = 1111
+  ClientHeight = 836
+  ClientWidth = 744
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,24 +13,27 @@ object TurmasPage: TTurmasPage
   OnCreate = FormCreate
   TextHeight = 15
   object pnlTurmas: TPanel
-    Left = 208
+    Left = 0
     Top = 0
-    Width = 801
-    Height = 681
-    Caption = 'C'#243'digo do Professor'
+    Width = 744
+    Height = 836
+    Align = alClient
     TabOrder = 0
-    object lblTituloTurma: TLabel
-      Left = 376
-      Top = 16
-      Width = 54
+    object lblTituloTurmas: TLabel
+      Left = 1
+      Top = 1
+      Width = 742
       Height = 25
-      Caption = 'Turma'
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Turmas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ExplicitWidth = 62
     end
     object Label2: TLabel
       Left = 280
@@ -64,111 +67,111 @@ object TurmasPage: TTurmasPage
       Caption = 'codigo_professor'
       FocusControl = DBEdit6
     end
-    object lblCodigoTurmInclu: TLabel
-      Left = 69
-      Top = 490
-      Width = 93
-      Height = 15
-      Caption = 'C'#243'digo da turma:'
-    end
-    object lblCodigoDiscInclu: TLabel
-      Left = 70
-      Top = 527
-      Width = 111
-      Height = 15
-      Caption = 'C'#243'digo da disciplina:'
-    end
     object lblCodigoProfInclu: TLabel
-      Left = 70
-      Top = 564
+      Left = 43
+      Top = 254
       Width = 114
       Height = 15
       Caption = 'C'#243'digo do professor: '
     end
-    object SpeedButton1: TSpeedButton
-      Left = 72
-      Top = 112
-      Width = 23
-      Height = 22
+    object lblCodigoDiscInclu: TLabel
+      Left = 43
+      Top = 217
+      Width = 111
+      Height = 15
+      Caption = 'C'#243'digo da disciplina:'
     end
-    object SpeedButton2: TSpeedButton
-      Left = 392
-      Top = 328
-      Width = 23
-      Height = 22
+    object lblCodigoTurmInclu: TLabel
+      Left = 42
+      Top = 180
+      Width = 93
+      Height = 15
+      Caption = 'C'#243'digo da turma:'
     end
-    object edtPesquisaCodigoTurma: TEdit
-      Left = 845
-      Top = 383
-      Width = 177
-      Height = 23
-      TabOrder = 0
-    end
-    object edtPesquisaTurmaCodProf: TEdit
-      Left = 856
-      Top = 413
-      Width = 185
-      Height = 23
-      TabOrder = 1
-    end
-    object edtPesquisaTurmaCodDisc: TEdit
-      Left = 856
-      Top = 442
-      Width = 185
-      Height = 23
-      TabOrder = 2
+    object ToolBar1: TToolBar
+      AlignWithMargins = True
+      Left = 248
+      Top = 32
+      Width = 674
+      Height = 780
+      Align = alNone
+      ButtonHeight = 26
+      Caption = 'ToolBar1'
+      Color = clSkyBlue
+      GradientEndColor = clSkyBlue
+      GradientStartColor = clSkyBlue
+      HotTrackColor = clSkyBlue
+      ParentColor = False
+      TabOrder = 9
+      object spdbtnIncluTurma: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 85
+        Height = 26
+        Caption = 'Incluir'
+      end
+      object spdbtnEditarTurma: TSpeedButton
+        Left = 85
+        Top = 0
+        Width = 90
+        Height = 26
+        Caption = 'Editar'
+      end
+      object spdbtnExcluirTurma: TSpeedButton
+        Left = 175
+        Top = 0
+        Width = 90
+        Height = 26
+        Caption = 'Excluir'
+      end
     end
     object RedTurmaEstud: TPanel
-      Left = 586
-      Top = 448
+      Left = 26
+      Top = 772
+      Width = 120
+      Height = 33
+      Align = alCustom
+      Caption = 'Estudantes'
+      Color = clBisque
+      ParentBackground = False
+      TabOrder = 0
+    end
+    object RedTurmaMatri: TPanel
+      Left = 397
+      Top = 772
       Width = 129
       Height = 33
-      Caption = 'Estudantes'
+      Align = alCustom
+      Caption = 'Matr'#237'culas'
+      Color = clBisque
+      ParentBackground = False
+      TabOrder = 1
+    end
+    object RedTurmaProfs: TPanel
+      Left = 584
+      Top = 772
+      Width = 129
+      Height = 33
+      Align = alCustom
+      Caption = 'Professores'
+      Color = clBisque
+      ParentBackground = False
+      TabOrder = 2
+    end
+    object RedTurmaDisci: TPanel
+      Left = 202
+      Top = 772
+      Width = 129
+      Height = 33
+      Align = alCustom
+      Caption = 'Disciplinas'
       Color = clBisque
       ParentBackground = False
       TabOrder = 3
     end
-    object RedTurmaMatri: TPanel
-      Left = 586
-      Top = 488
-      Width = 129
-      Height = 33
-      Caption = 'Matr'#237'culas'
-      Color = clBisque
-      ParentBackground = False
-      TabOrder = 4
-    end
-    object RedTurmaProfs: TPanel
-      Left = 586
-      Top = 527
-      Width = 129
-      Height = 33
-      Caption = 'Professores'
-      Color = clBisque
-      ParentBackground = False
-      TabOrder = 5
-    end
-    object RedTurmaDisci: TPanel
-      Left = 586
-      Top = 566
-      Width = 129
-      Height = 33
-      Caption = 'Disciplinas'
-      Color = clBisque
-      ParentBackground = False
-      TabOrder = 6
-    end
-    object AFazer1: TPanel
-      Left = 66
-      Top = 47
-      Width = 655
-      Height = 41
-      Caption = 'Barra de Pesquisa (fazer)'
-      TabOrder = 7
-    end
     object DBNavigator1: TDBNavigator
-      Left = 70
-      Top = 442
+      Left = 453
+      Top = 207
       Width = 180
       Height = 25
       Cursor = crHandPoint
@@ -187,8 +190,7 @@ object TurmasPage: TTurmasPage
         'Atualizar'
         'Aplicar edi'#231#245'es'
         'Cancelar edi'#231#245'es')
-      TabOrder = 8
-      OnClick = DBNavigator1Click
+      TabOrder = 4
     end
     object DBEdit2: TDBEdit
       Left = 280
@@ -197,7 +199,7 @@ object TurmasPage: TTurmasPage
       Height = 23
       DataField = 'codigo_disciplina'
       DataSource = DataSource1
-      TabOrder = 9
+      TabOrder = 5
     end
     object DBEdit3: TDBEdit
       Left = 280
@@ -206,7 +208,7 @@ object TurmasPage: TTurmasPage
       Height = 23
       DataField = 'codigo_professor'
       DataSource = DataSource1
-      TabOrder = 10
+      TabOrder = 6
     end
     object DBEdit5: TDBEdit
       Left = 216
@@ -215,7 +217,7 @@ object TurmasPage: TTurmasPage
       Height = 23
       DataField = 'codigo_disciplina'
       DataSource = DataSource1
-      TabOrder = 11
+      TabOrder = 7
     end
     object DBEdit6: TDBEdit
       Left = 216
@@ -224,74 +226,17 @@ object TurmasPage: TTurmasPage
       Height = 23
       DataField = 'codigo_professor'
       DataSource = DataSource1
-      TabOrder = 12
-    end
-    object TDBEdit
-      Left = 168
-      Top = 487
-      Width = 121
-      Height = 23
-      DataField = 'codigo_turma'
-      DataSource = DataSource1
-      TabOrder = 13
-    end
-    object TDBEdit
-      Left = 187
-      Top = 524
-      Width = 121
-      Height = 23
-      DataField = 'codigo_disciplina'
-      DataSource = DataSource1
-      TabOrder = 14
-    end
-    object TDBEdit
-      Left = 190
-      Top = 561
-      Width = 121
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSource1
-      TabOrder = 15
-    end
-    object ActionToolBar1: TActionToolBar
-      Left = 1
-      Top = 108
-      Width = 799
-      Height = 29
-      Align = alNone
-      Caption = 'ActionToolBar1'
-      Color = clMenuBar
-      ColorMap.DisabledFontColor = 10461087
-      ColorMap.HighlightColor = clWhite
-      ColorMap.BtnSelectedFont = clBlack
-      ColorMap.UnusedColor = clWhite
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -12
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      Spacing = 0
-    end
-    object ToolBar1: TToolBar
-      Left = 1
-      Top = 1
-      Width = 799
-      Height = 29
-      Caption = 'ToolBar1'
-      TabOrder = 17
-      ExplicitLeft = 0
-      ExplicitTop = 94
+      TabOrder = 8
     end
     object DBGrid1: TDBGrid
-      Left = 66
-      Top = 151
+      Left = 42
+      Top = 303
       Width = 655
       Height = 285
       Cursor = crHandPoint
       DataSource = DataSource1
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
-      TabOrder = 18
+      TabOrder = 10
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
@@ -317,9 +262,46 @@ object TurmasPage: TTurmasPage
           Visible = True
         end>
     end
+    object TDBEdit
+      Left = 163
+      Top = 251
+      Width = 121
+      Height = 23
+      DataField = 'codigo_professor'
+      DataSource = DataSource1
+      TabOrder = 11
+    end
+    object TDBEdit
+      Left = 160
+      Top = 214
+      Width = 121
+      Height = 23
+      DataField = 'codigo_disciplina'
+      DataSource = DataSource1
+      TabOrder = 12
+    end
+    object TDBEdit
+      Left = 141
+      Top = 177
+      Width = 121
+      Height = 23
+      DataField = 'codigo_turma'
+      DataSource = DataSource1
+      TabOrder = 13
+      TextHint = '00000'
+    end
+    object ToolBar2: TToolBar
+      Left = 1
+      Top = 806
+      Width = 742
+      Height = 29
+      Align = alBottom
+      Caption = 'ToolBar2'
+      TabOrder = 14
+    end
   end
   object DataSource1: TDataSource
-    Left = 280
-    Top = 608
+    Left = 352
+    Top = 184
   end
 end

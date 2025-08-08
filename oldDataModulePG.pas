@@ -1,4 +1,4 @@
-unit uDataModulePG;
+unit oldDataModulePG;
 
 interface
 
@@ -20,12 +20,6 @@ type
     QueryTurmascodigo_turma: TStringField;
     QueryTurmascodigo_disciplina: TStringField;
     QueryTurmascodigo_professor: TStringField;
-    QueryDisciplinas: TFDQuery;
-    QueryEstudantes: TFDQuery;
-    QueryProfessores: TFDQuery;
-    QueryMatrículas: TFDQuery;
-    procedure FDPhysPgDriverLink1DriverCreated(Sender: TObject);
-    procedure FDGUIxWaitCursor1Hide(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,6 +34,5 @@ implementation
 {%CLASSGROUP 'System.Classes.TPersistent'}
 
 {$R *.dfm}
-
 
 end.
