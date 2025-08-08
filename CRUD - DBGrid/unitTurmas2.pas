@@ -13,7 +13,7 @@ uses
 var
    DataSource1: TDataSource;
    DBGrid: TDBGrid;
-
+   //FDConnection: TFDConnection;
 
 type
   TTurmasPage = class(TForm)
@@ -66,7 +66,7 @@ procedure TTurmasPage.FormCreate(Sender: TObject);
 begin
   DataSource1 := TDataSource.Create(Self);
   DBGrid1  := TDBGrid.Create(Self);
-
+  //FDConnection1 :=  TFDConnection.Create(Self);
 end;
 
 
