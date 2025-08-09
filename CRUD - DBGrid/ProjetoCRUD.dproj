@@ -134,6 +134,20 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\oldDataModulePG.pas"/>
+        <DCCReference Include="NaoUtilizado.DataModule.pas">
+            <Form>DataModule1</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uDisciplinas.pas"/>
+        <DCCReference Include="uEstudantes.pas"/>
+        <DCCReference Include="uMatriculas.pas"/>
+        <DCCReference Include="uProfessores.pas"/>
+        <DCCReference Include="uTurmas.pas"/>
+        <DCCReference Include="unitMatriculas.pas">
+            <Form>Form2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="lib\4920.dat.gz"/>
         <None Include="lib\4921.dat.gz"/>
         <None Include="lib\4922.dat.gz"/>
