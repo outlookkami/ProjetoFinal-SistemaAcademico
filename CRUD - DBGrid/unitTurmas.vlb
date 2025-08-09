@@ -1,29 +1,17 @@
-﻿[RedTurmaProfs]
-Coordinates=186,146,105,58
-
-[pnlTurmas]
+﻿[pnlTurmas]
 Coordinates=123,78,75,58
 
 [lblTituloTurmas]
 Coordinates=10,146,103,58
 
-[RedTurmaEstud]
-Coordinates=364,146,108,58
-
 [DBEdit2]
 Coordinates=458,260,62,36
-
-[RedTurmaMatri]
-Coordinates=208,78,104,58
 
 [Label6]
 Coordinates=322,78,53,58
 
 [DBEdit3]
 Coordinates=386,260,62,36
-
-[RedTurmaDisci]
-Coordinates=10,78,103,58
 
 [Label2]
 Coordinates=123,146,53,58
@@ -76,4 +64,16 @@ Coordinates=0,0,89,36
 
 [DBGridTurmas]
 Coordinates=240,260,64,36
+
+[RedEstud]
+Coordinates=364,146,108,58
+
+[RedDisci]
+Coordinates=10,78,103,58
+
+[RedMatri]
+Coordinates=208,78,104,58
+
+[RedProfs]
+Coordinates=186,146,105,58
 

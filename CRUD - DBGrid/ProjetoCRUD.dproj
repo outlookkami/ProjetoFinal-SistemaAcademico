@@ -125,7 +125,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="unitTurmas2.pas">
+        <DCCReference Include="unitTurmas.pas">
             <Form>TurmasPage</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -145,7 +145,19 @@
         <DCCReference Include="uProfessores.pas"/>
         <DCCReference Include="uTurmas.pas"/>
         <DCCReference Include="unitMatriculas.pas">
-            <Form>Form2</Form>
+            <Form>MatriculasPage</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitDisciplinas.pas">
+            <Form>DisciplinasPage</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitProfessores.pas">
+            <Form>ProfessoresPage</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitEstudantes.pas">
+            <Form>EstudantesPage</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <None Include="lib\4920.dat.gz"/>

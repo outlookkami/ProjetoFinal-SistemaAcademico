@@ -4,7 +4,7 @@ program ProjetoCRUD;
 
 uses
   Vcl.Forms,
-  unitTurmas2 in 'unitTurmas2.pas' {TurmasPage},
+  unitTurmas in 'unitTurmas.pas' {TurmasPage},
   uMain in 'uMain.pas' {Form1},
   oldDataModulePG in '..\oldDataModulePG.pas',
   NaoUtilizado.DataModule in 'NaoUtilizado.DataModule.pas' {DataModule1: TDataModule},
@@ -13,7 +13,10 @@ uses
   uMatriculas in 'uMatriculas.pas',
   uProfessores in 'uProfessores.pas',
   uTurmas in 'uTurmas.pas',
-  unitMatriculas in 'unitMatriculas.pas' {Form2};
+  unitMatriculas in 'unitMatriculas.pas' {MatriculasPage},
+  unitDisciplinas in 'unitDisciplinas.pas' {DisciplinasPage},
+  unitProfessores in 'unitProfessores.pas' {ProfessoresPage},
+  unitEstudantes in 'unitEstudantes.pas' {EstudantesPage};
 
 {$R *.res}
 
@@ -24,6 +27,9 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TTurmasPage, TurmasPage);
   Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TMatriculasPage, MatriculasPage);
+  Application.CreateForm(TDisciplinasPage, DisciplinasPage);
+  Application.CreateForm(TProfessoresPage, ProfessoresPage);
+  Application.CreateForm(TEstudantesPage, EstudantesPage);
   Application.Run;
 end.

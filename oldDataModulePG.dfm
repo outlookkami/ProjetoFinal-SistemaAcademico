@@ -24,7 +24,7 @@
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM turmas;')
-    Left = 124
+    Left = 140
     Top = 348
     object QueryTurmascodigo_turma: TStringField
       FieldName = 'codigo_turma'

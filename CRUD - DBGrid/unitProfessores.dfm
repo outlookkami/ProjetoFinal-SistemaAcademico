@@ -1,9 +1,9 @@
-object MatriculasPage: TMatriculasPage
+object ProfessoresPage: TProfessoresPage
   Left = 0
   Top = 0
-  Caption = 'P'#225'gina de Matr'#237'culas'
-  ClientHeight = 642
-  ClientWidth = 867
+  Caption = 'P'#225'gina de Professores'
+  ClientHeight = 643
+  ClientWidth = 955
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,29 +11,29 @@ object MatriculasPage: TMatriculasPage
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object pnlMatriculas: TPanel
+  object pnlProfessores: TPanel
     Left = 0
     Top = 0
-    Width = 867
-    Height = 642
+    Width = 955
+    Height = 643
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = -16
-    object lblTituloMatriculas: TLabel
+    ExplicitLeft = -8
+    object lblTituloProfessores: TLabel
       Left = 1
       Top = 1
-      Width = 865
+      Width = 953
       Height = 25
       Align = alTop
       Alignment = taCenter
-      Caption = 'Matr'#237'culas'
+      Caption = 'Professores'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitWidth = 88
+      ExplicitWidth = 97
     end
     object Label2: TLabel
       Left = 280
@@ -67,42 +67,26 @@ object MatriculasPage: TMatriculasPage
       Caption = 'codigo_professor'
       FocusControl = DBEdit6
     end
-    object lblCodigoEstudInclu: TLabel
+    object lblCPFProfessor: TLabel
       Left = 323
       Top = 174
-      Width = 117
+      Width = 96
       Height = 15
-      Caption = 'C'#243'digo do estudante: '
+      Caption = 'CPF do Professor: '
     end
-    object lblCodigoTurmaInclu: TLabel
+    object lblNomeProfessor: TLabel
       Left = 323
       Top = 137
-      Width = 93
+      Width = 105
       Height = 15
-      Caption = 'C'#243'digo da turma:'
+      Caption = 'Nome do professor:'
     end
-    object lblCodigoTurmInclu: TLabel
+    object lblCodigoProf: TLabel
       Left = 322
       Top = 100
       Width = 111
       Height = 15
-      Caption = 'C'#243'digo da matr'#237'cula:'
-    end
-    object ToolBar1: TToolBar
-      AlignWithMargins = True
-      Left = 325
-      Top = 47
-      Width = 262
-      Align = alCustom
-      ButtonHeight = 34
-      Caption = 'ToolBar1'
-      Color = clSkyBlue
-      Customizable = True
-      GradientEndColor = clSkyBlue
-      GradientStartColor = clSkyBlue
-      HotTrackColor = clSkyBlue
-      ParentColor = False
-      TabOrder = 8
+      Caption = 'C'#243'digo do professor:'
     end
     object RedEstud: TPanel
       Left = 82
@@ -158,7 +142,7 @@ object MatriculasPage: TMatriculasPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceProfessores
       TabOrder = 4
     end
     object DBEdit3: TDBEdit
@@ -167,7 +151,7 @@ object MatriculasPage: TMatriculasPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceProfessores
       TabOrder = 5
     end
     object DBEdit5: TDBEdit
@@ -176,7 +160,7 @@ object MatriculasPage: TMatriculasPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceProfessores
       TabOrder = 6
     end
     object DBEdit6: TDBEdit
@@ -185,7 +169,7 @@ object MatriculasPage: TMatriculasPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceProfessores
       TabOrder = 7
     end
     object DBGridMatriculas: TDBGrid
@@ -194,9 +178,9 @@ object MatriculasPage: TMatriculasPage
       Width = 655
       Height = 313
       Cursor = crHandPoint
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceProfessores
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
-      TabOrder = 9
+      TabOrder = 8
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
@@ -222,49 +206,49 @@ object MatriculasPage: TMatriculasPage
           Visible = True
         end>
     end
-    object dbedtCodEstud: TDBEdit
+    object dbedtCPFProfessor: TDBEdit
       Left = 443
       Top = 171
       Width = 121
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
-      TabOrder = 10
+      DataSource = DataSourceProfessores
+      TabOrder = 9
     end
-    object dbedtCodMatricula: TDBEdit
+    object dbedtCodProfessor: TDBEdit
       Left = 439
       Top = 98
       Width = 121
       Height = 23
       DataField = 'codigo_turma'
-      DataSource = DataSourceMatriculas
-      TabOrder = 11
+      DataSource = DataSourceProfessores
+      TabOrder = 10
       TextHint = '00000'
     end
     object ToolBar2: TToolBar
       Left = 1
-      Top = 612
-      Width = 865
+      Top = 613
+      Width = 953
       Height = 29
       Align = alBottom
       Caption = 'ToolBar2'
-      TabOrder = 12
-      ExplicitTop = 595
-      ExplicitWidth = 859
+      TabOrder = 11
+      ExplicitTop = 612
+      ExplicitWidth = 865
     end
-    object dbedtCodTurma: TDBEdit
+    object dbedtNomeProfessor: TDBEdit
       Left = 440
       Top = 134
       Width = 121
       Height = 23
       DataField = 'codigo_disciplina'
-      TabOrder = 13
+      TabOrder = 12
     end
   end
-  object ToolBar3: TToolBar
+  object ToolBar1: TToolBar
     AlignWithMargins = True
-    Left = 316
-    Top = 50
+    Left = 354
+    Top = 48
     Width = 271
     Height = 27
     Align = alCustom
@@ -277,8 +261,8 @@ object MatriculasPage: TMatriculasPage
     HotTrackColor = clSkyBlue
     ParentColor = False
     TabOrder = 1
-    ExplicitLeft = 313
-    ExplicitTop = 47
+    ExplicitLeft = 351
+    ExplicitTop = 45
     object spdbtnIncluTurma: TSpeedButton
       Left = 0
       Top = 0
@@ -304,9 +288,9 @@ object MatriculasPage: TMatriculasPage
       Caption = 'Excluir'
     end
   end
-  object DataSourceMatriculas: TDataSource
+  object DataSourceProfessores: TDataSource
     DataSet = DataModule2.QueryTurmas
-    Left = 656
-    Top = 96
+    Left = 648
+    Top = 120
   end
 end

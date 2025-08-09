@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, unitTurmas2, Vcl.StdCtrls,
-  Vcl.ComCtrls;
+  Vcl.ComCtrls, unitMatriculas, unitDisciplinas, unitProfessores, unitEstudantes;
 
 type
   TForm1 = class(TForm)
@@ -39,26 +39,30 @@ implementation
 
 procedure TForm1.RedMainDisciClick(Sender: TObject);
 begin
-  //var DisciplinasPage := TDisciplinasPage.Create(Self);
-  //DisciplinasPage.Show;
+  var
+    DisciplinasPage := TDisciplinasPage.Create(Self);
+    DisciplinasPage.Show;
 end;
 
 procedure TForm1.RedMainEstudClick(Sender: TObject);
 begin
-  //var EstudantesPage := TEstudantesPage.Create(Self);
-  //EstudantesPage.Show;
+  var
+    EstudantesPage := TEstudantesPage.Create(Self);
+    EstudantesPage.Show;
 end;
 
 procedure TForm1.RedMainMatriClick(Sender: TObject);
 begin
-  //var MatriculasPage := TMatriculasPage.Create(Self);
-  //MatriculasPage.Show;
+  var
+    MatriculasPage := TMatriculasPage.Create(Self);
+    MatriculasPage.Show;
 end;
 
 procedure TForm1.RedMainProfsClick(Sender: TObject);
 begin
-  //var ProfessoresPage := TProfessoresPage.Create(Self);
-  //ProfessoresPage.Show;
+  var
+    ProfessoresPage := TProfessoresPage.Create(Self);
+    ProfessoresPage.Show;
 end;
 
 procedure TForm1.RedMainTurmasClick(Sender: TObject);

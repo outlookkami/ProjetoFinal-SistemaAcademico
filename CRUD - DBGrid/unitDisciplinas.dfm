@@ -1,9 +1,9 @@
-object MatriculasPage: TMatriculasPage
+object DisciplinasPage: TDisciplinasPage
   Left = 0
   Top = 0
-  Caption = 'P'#225'gina de Matr'#237'culas'
+  Caption = 'P'#225'gina de Disciplinas'
   ClientHeight = 642
-  ClientWidth = 867
+  ClientWidth = 953
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,29 +11,29 @@ object MatriculasPage: TMatriculasPage
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object pnlMatriculas: TPanel
+  object pnlDisciplinas: TPanel
     Left = 0
     Top = 0
-    Width = 867
+    Width = 953
     Height = 642
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = -16
-    object lblTituloMatriculas: TLabel
+    ExplicitTop = 8
+    object lblTituloDisciplinas: TLabel
       Left = 1
       Top = 1
-      Width = 865
+      Width = 951
       Height = 25
       Align = alTop
       Alignment = taCenter
-      Caption = 'Matr'#237'culas'
+      Caption = 'Disciplinas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitWidth = 88
+      ExplicitWidth = 90
     end
     object Label2: TLabel
       Left = 280
@@ -67,34 +67,27 @@ object MatriculasPage: TMatriculasPage
       Caption = 'codigo_professor'
       FocusControl = DBEdit6
     end
-    object lblCodigoEstudInclu: TLabel
-      Left = 323
-      Top = 174
-      Width = 117
+    object lblNomeDisciplina: TLabel
+      Left = 324
+      Top = 153
+      Width = 108
       Height = 15
-      Caption = 'C'#243'digo do estudante: '
+      Caption = 'Nome da disciplina: '
     end
-    object lblCodigoTurmaInclu: TLabel
+    object lblCodigoDisc: TLabel
       Left = 323
-      Top = 137
-      Width = 93
-      Height = 15
-      Caption = 'C'#243'digo da turma:'
-    end
-    object lblCodigoTurmInclu: TLabel
-      Left = 322
-      Top = 100
+      Top = 116
       Width = 111
       Height = 15
-      Caption = 'C'#243'digo da matr'#237'cula:'
+      Caption = 'C'#243'digo da disciplina:'
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 325
-      Top = 47
-      Width = 262
+      Left = 351
+      Top = 45
+      Width = 267
       Align = alCustom
-      ButtonHeight = 34
+      ButtonHeight = 26
       Caption = 'ToolBar1'
       Color = clSkyBlue
       Customizable = True
@@ -103,10 +96,36 @@ object MatriculasPage: TMatriculasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 8
+      ExplicitLeft = 348
+      ExplicitTop = 42
+      object spdbtnIncluTurma: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 85
+        Height = 26
+        Align = alLeft
+        Caption = 'Incluir'
+      end
+      object spdbtnEditarTurma: TSpeedButton
+        Left = 85
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alClient
+        Caption = 'Editar'
+      end
+      object spdbtnExcluirTurma: TSpeedButton
+        Left = 175
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alRight
+        Caption = 'Excluir'
+      end
     end
     object RedEstud: TPanel
-      Left = 82
-      Top = 575
+      Left = 122
+      Top = 573
       Width = 120
       Height = 33
       Cursor = crHandPoint
@@ -116,21 +135,21 @@ object MatriculasPage: TMatriculasPage
       ParentBackground = False
       TabOrder = 0
     end
-    object RedTurmas: TPanel
-      Left = 455
-      Top = 575
+    object RedMatri: TPanel
+      Left = 495
+      Top = 573
       Width = 129
       Height = 33
       Cursor = crHandPoint
       Align = alCustom
-      Caption = 'Turmas'
+      Caption = 'Matr'#237'culas'
       Color = clBisque
       ParentBackground = False
       TabOrder = 1
     end
     object RedProfs: TPanel
-      Left = 648
-      Top = 575
+      Left = 688
+      Top = 573
       Width = 129
       Height = 33
       Cursor = crHandPoint
@@ -140,14 +159,14 @@ object MatriculasPage: TMatriculasPage
       ParentBackground = False
       TabOrder = 2
     end
-    object RedDisci: TPanel
-      Left = 263
-      Top = 575
+    object RedTurmas: TPanel
+      Left = 303
+      Top = 573
       Width = 129
       Height = 33
       Cursor = crHandPoint
       Align = alCustom
-      Caption = 'Disciplinas'
+      Caption = 'Turmas'
       Color = clBisque
       ParentBackground = False
       TabOrder = 3
@@ -158,7 +177,7 @@ object MatriculasPage: TMatriculasPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       TabOrder = 4
     end
     object DBEdit3: TDBEdit
@@ -167,7 +186,7 @@ object MatriculasPage: TMatriculasPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       TabOrder = 5
     end
     object DBEdit5: TDBEdit
@@ -176,7 +195,7 @@ object MatriculasPage: TMatriculasPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       TabOrder = 6
     end
     object DBEdit6: TDBEdit
@@ -185,16 +204,16 @@ object MatriculasPage: TMatriculasPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       TabOrder = 7
     end
-    object DBGridMatriculas: TDBGrid
-      Left = 106
-      Top = 224
+    object DBGridDisciplinas: TDBGrid
+      Left = 146
+      Top = 216
       Width = 655
       Height = 313
       Cursor = crHandPoint
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
       TabOrder = 9
       TitleFont.Charset = DEFAULT_CHARSET
@@ -222,91 +241,39 @@ object MatriculasPage: TMatriculasPage
           Visible = True
         end>
     end
-    object dbedtCodEstud: TDBEdit
-      Left = 443
-      Top = 171
+    object dbedtNomeDisciplina: TDBEdit
+      Left = 438
+      Top = 150
       Width = 121
       Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
+      DataField = 'codigo_disciplina'
+      DataSource = DataSourceDisciplinas
       TabOrder = 10
     end
-    object dbedtCodMatricula: TDBEdit
-      Left = 439
-      Top = 98
+    object dbedtCodDisciplina: TDBEdit
+      Left = 440
+      Top = 114
       Width = 121
       Height = 23
       DataField = 'codigo_turma'
-      DataSource = DataSourceMatriculas
+      DataSource = DataSourceDisciplinas
       TabOrder = 11
       TextHint = '00000'
     end
     object ToolBar2: TToolBar
       Left = 1
       Top = 612
-      Width = 865
+      Width = 951
       Height = 29
       Align = alBottom
       Caption = 'ToolBar2'
       TabOrder = 12
-      ExplicitTop = 595
-      ExplicitWidth = 859
-    end
-    object dbedtCodTurma: TDBEdit
-      Left = 440
-      Top = 134
-      Width = 121
-      Height = 23
-      DataField = 'codigo_disciplina'
-      TabOrder = 13
+      ExplicitWidth = 865
     end
   end
-  object ToolBar3: TToolBar
-    AlignWithMargins = True
-    Left = 316
-    Top = 50
-    Width = 271
-    Height = 27
-    Align = alCustom
-    ButtonHeight = 26
-    Caption = 'ToolBar1'
-    Color = clSkyBlue
-    Customizable = True
-    GradientEndColor = clSkyBlue
-    GradientStartColor = clSkyBlue
-    HotTrackColor = clSkyBlue
-    ParentColor = False
-    TabOrder = 1
-    ExplicitLeft = 313
-    ExplicitTop = 47
-    object spdbtnIncluTurma: TSpeedButton
-      Left = 0
-      Top = 0
-      Width = 85
-      Height = 26
-      Align = alLeft
-      Caption = 'Incluir'
-    end
-    object spdbtnEditarTurma: TSpeedButton
-      Left = 85
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alClient
-      Caption = 'Editar'
-    end
-    object spdbtnExcluirTurma: TSpeedButton
-      Left = 175
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alRight
-      Caption = 'Excluir'
-    end
-  end
-  object DataSourceMatriculas: TDataSource
+  object DataSourceDisciplinas: TDataSource
     DataSet = DataModule2.QueryTurmas
-    Left = 656
-    Top = 96
+    Left = 648
+    Top = 104
   end
 end
