@@ -43,15 +43,6 @@ Coordinates=10,10,120,58
 [ToolBar2]
 Coordinates=491,214,67,36
 
-[spdbtnIncluTurma]
-Coordinates=364,214,117,36
-
-[spdbtnExcluirTurma]
-Coordinates=144,214,129,36
-
-[spdbtnEditarTurma]
-Coordinates=10,214,124,36
-
 [lblCodigoDiscInclu]
 Coordinates=276,10,121,58
 
@@ -76,4 +67,13 @@ Coordinates=208,78,104,58
 
 [RedProfs]
 Coordinates=186,146,105,58
+
+[spdbtnExcluir]
+Coordinates=144,214,129,36
+
+[spdbtnEditar]
+Coordinates=10,214,124,36
+
+[spdbtnInclu]
+Coordinates=364,214,117,36
 

@@ -19,7 +19,8 @@ object TurmasPage: TTurmasPage
     Height = 757
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 8
+    ExplicitWidth = 861
+    ExplicitHeight = 740
     object lblTituloTurmas: TLabel
       Left = 1
       Top = 1
@@ -91,10 +92,10 @@ object TurmasPage: TTurmasPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 303
-      Top = 45
-      Width = 271
-      Height = 27
+      Left = 269
+      Top = 50
+      Width = 360
+      Height = 35
       Align = alCustom
       ButtonHeight = 26
       Caption = 'ToolBar1'
@@ -105,32 +106,42 @@ object TurmasPage: TTurmasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 8
-      ExplicitLeft = 300
-      ExplicitTop = 42
-      object spdbtnIncluTurma: TSpeedButton
+      ExplicitLeft = 266
+      ExplicitTop = 47
+      object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
         Width = 85
         Height = 26
         Align = alLeft
-        Caption = 'Incluir'
-        OnClick = spdbtnIncluTurmaClick
+        Caption = '&Incluir'
+        OnClick = spdbtnIncluClick
       end
-      object spdbtnEditarTurma: TSpeedButton
+      object SpeedButton1: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
-        Align = alClient
-        Caption = 'Editar'
+        Caption = '&Salvar'
+        OnClick = SpeedButton1Click
       end
-      object spdbtnExcluirTurma: TSpeedButton
+      object spdbtnEditar: TSpeedButton
         Left = 175
         Top = 0
         Width = 90
         Height = 26
+        Align = alClient
+        Caption = '&Editar'
+        OnClick = spdbtnEditarClick
+      end
+      object spdbtnExcluir: TSpeedButton
+        Left = 265
+        Top = 0
+        Width = 90
+        Height = 26
         Align = alRight
-        Caption = 'Excluir'
+        Caption = 'E&xcluir'
+        OnClick = spdbtnExcluirClick
       end
     end
     object RedEstud: TPanel
@@ -292,7 +303,7 @@ object TurmasPage: TTurmasPage
     end
   end
   object DataSourceTurmas: TDataSource
-    DataSet = DataModule2.QueryTurmas
+    DataSet = DM.QueryTurmas
     Left = 624
     Top = 96
   end

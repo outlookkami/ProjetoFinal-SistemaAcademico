@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.Client, FireDAC.Comp.UI, Data.Win.ADODB;
 
 type
-  TDataModule2 = class(TDataModule)
+  TDM = class(TDataModule)
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDConnection1: TFDConnection;
     QueryTurmas: TFDQuery;
@@ -23,7 +23,7 @@ type
     QueryDisciplinas: TFDQuery;
     QueryEstudantes: TFDQuery;
     QueryProfessores: TFDQuery;
-    QueryMatrículas: TFDQuery;
+    QueryMatriculas: TFDQuery;
     FDQuery1: TFDQuery;
     StringField1: TStringField;
     StringField2: TStringField;
@@ -35,7 +35,7 @@ type
   end;
 
 var
-  DataModule2: TDataModule2;
+  DM: TDM;
 
 implementation
 

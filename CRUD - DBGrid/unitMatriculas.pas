@@ -19,7 +19,6 @@ type
     lblCodigoEstudInclu: TLabel;
     lblCodigoTurmaInclu: TLabel;
     lblCodigoTurmInclu: TLabel;
-    ToolBar1: TToolBar;
     RedEstud: TPanel;
     RedTurmas: TPanel;
     RedProfs: TPanel;
@@ -29,15 +28,15 @@ type
     DBEdit5: TDBEdit;
     DBEdit6: TDBEdit;
     DBGridMatriculas: TDBGrid;
-    ToolBar2: TToolBar;
     DataSourceMatriculas: TDataSource;
     dbedtCodEstud: TDBEdit;
     dbedtCodMatricula: TDBEdit;
     dbedtCodTurma: TDBEdit;
-    ToolBar3: TToolBar;
-    spdbtnIncluTurma: TSpeedButton;
-    spdbtnEditarTurma: TSpeedButton;
-    spdbtnExcluirTurma: TSpeedButton;
+    ToolBar1: TToolBar;
+    spdbtnInclu: TSpeedButton;
+    spdbtnEditar: TSpeedButton;
+    spdbtnExcluir: TSpeedButton;
+    SpeedButton1: TSpeedButton;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

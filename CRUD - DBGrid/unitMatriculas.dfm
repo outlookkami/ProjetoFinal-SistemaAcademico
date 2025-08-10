@@ -18,7 +18,8 @@ object MatriculasPage: TMatriculasPage
     Height = 642
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = -16
+    ExplicitWidth = 861
+    ExplicitHeight = 625
     object lblTituloMatriculas: TLabel
       Left = 1
       Top = 1
@@ -87,22 +88,6 @@ object MatriculasPage: TMatriculasPage
       Width = 111
       Height = 15
       Caption = 'C'#243'digo da matr'#237'cula:'
-    end
-    object ToolBar1: TToolBar
-      AlignWithMargins = True
-      Left = 325
-      Top = 47
-      Width = 262
-      Align = alCustom
-      ButtonHeight = 34
-      Caption = 'ToolBar1'
-      Color = clSkyBlue
-      Customizable = True
-      GradientEndColor = clSkyBlue
-      GradientStartColor = clSkyBlue
-      HotTrackColor = clSkyBlue
-      ParentColor = False
-      TabOrder = 8
     end
     object RedEstud: TPanel
       Left = 82
@@ -196,7 +181,7 @@ object MatriculasPage: TMatriculasPage
       Cursor = crHandPoint
       DataSource = DataSourceMatriculas
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
-      TabOrder = 9
+      TabOrder = 8
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
@@ -229,7 +214,7 @@ object MatriculasPage: TMatriculasPage
       Height = 23
       DataField = 'codigo_professor'
       DataSource = DataSourceMatriculas
-      TabOrder = 10
+      TabOrder = 9
     end
     object dbedtCodMatricula: TDBEdit
       Left = 439
@@ -238,19 +223,8 @@ object MatriculasPage: TMatriculasPage
       Height = 23
       DataField = 'codigo_turma'
       DataSource = DataSourceMatriculas
-      TabOrder = 11
+      TabOrder = 10
       TextHint = '00000'
-    end
-    object ToolBar2: TToolBar
-      Left = 1
-      Top = 612
-      Width = 865
-      Height = 29
-      Align = alBottom
-      Caption = 'ToolBar2'
-      TabOrder = 12
-      ExplicitTop = 595
-      ExplicitWidth = 859
     end
     object dbedtCodTurma: TDBEdit
       Left = 440
@@ -258,54 +232,61 @@ object MatriculasPage: TMatriculasPage
       Width = 121
       Height = 23
       DataField = 'codigo_disciplina'
-      TabOrder = 13
+      TabOrder = 11
     end
-  end
-  object ToolBar3: TToolBar
-    AlignWithMargins = True
-    Left = 316
-    Top = 50
-    Width = 271
-    Height = 27
-    Align = alCustom
-    ButtonHeight = 26
-    Caption = 'ToolBar1'
-    Color = clSkyBlue
-    Customizable = True
-    GradientEndColor = clSkyBlue
-    GradientStartColor = clSkyBlue
-    HotTrackColor = clSkyBlue
-    ParentColor = False
-    TabOrder = 1
-    ExplicitLeft = 313
-    ExplicitTop = 47
-    object spdbtnIncluTurma: TSpeedButton
-      Left = 0
-      Top = 0
-      Width = 85
-      Height = 26
-      Align = alLeft
-      Caption = 'Incluir'
-    end
-    object spdbtnEditarTurma: TSpeedButton
-      Left = 85
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alClient
-      Caption = 'Editar'
-    end
-    object spdbtnExcluirTurma: TSpeedButton
-      Left = 175
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alRight
-      Caption = 'Excluir'
+    object ToolBar1: TToolBar
+      AlignWithMargins = True
+      Left = 253
+      Top = 35
+      Width = 360
+      Height = 35
+      Align = alCustom
+      ButtonHeight = 26
+      Caption = 'ToolBar1'
+      Color = clSkyBlue
+      Customizable = True
+      GradientEndColor = clSkyBlue
+      GradientStartColor = clSkyBlue
+      HotTrackColor = clSkyBlue
+      ParentColor = False
+      TabOrder = 12
+      ExplicitLeft = 250
+      ExplicitTop = 32
+      object spdbtnInclu: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 85
+        Height = 26
+        Align = alLeft
+        Caption = '&Incluir'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 85
+        Top = 0
+        Width = 90
+        Height = 26
+        Caption = '&Salvar'
+      end
+      object spdbtnEditar: TSpeedButton
+        Left = 175
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alClient
+        Caption = '&Editar'
+      end
+      object spdbtnExcluir: TSpeedButton
+        Left = 265
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alRight
+        Caption = 'E&xcluir'
+      end
     end
   end
   object DataSourceMatriculas: TDataSource
-    DataSet = DataModule2.QueryTurmas
+    DataSet = DM.QueryTurmas
     Left = 656
     Top = 96
   end

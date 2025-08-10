@@ -18,8 +18,8 @@ object EstudantesPage: TEstudantesPage
     Height = 670
     Align = alClient
     TabOrder = 0
-    ExplicitTop = 8
-    ExplicitWidth = 956
+    ExplicitWidth = 871
+    ExplicitHeight = 653
     object lblTituloEstudantes: TLabel
       Left = 1
       Top = 1
@@ -220,10 +220,10 @@ object EstudantesPage: TEstudantesPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 312
-      Top = 52
-      Width = 270
-      Height = 27
+      Left = 266
+      Top = 35
+      Width = 360
+      Height = 35
       Align = alCustom
       ButtonHeight = 26
       Caption = 'ToolBar1'
@@ -234,36 +234,43 @@ object EstudantesPage: TEstudantesPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 11
-      ExplicitLeft = 306
-      ExplicitTop = 46
-      object spdbtnIncluTurma: TSpeedButton
+      ExplicitLeft = 263
+      ExplicitTop = 32
+      object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
         Width = 85
         Height = 26
         Align = alLeft
-        Caption = 'Incluir'
+        Caption = '&Incluir'
       end
-      object spdbtnEditarTurma: TSpeedButton
+      object SpeedButton1: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
-        Align = alClient
-        Caption = 'Editar'
+        Caption = '&Salvar'
       end
-      object spdbtnExcluirTurma: TSpeedButton
+      object spdbtnEditar: TSpeedButton
         Left = 175
         Top = 0
         Width = 90
         Height = 26
+        Align = alClient
+        Caption = '&Editar'
+      end
+      object spdbtnExcluir: TSpeedButton
+        Left = 265
+        Top = 0
+        Width = 90
+        Height = 26
         Align = alRight
-        Caption = 'Excluir'
+        Caption = 'E&xcluir'
       end
     end
   end
   object DataSourceEstudantes: TDataSource
-    DataSet = DataModule2.QueryTurmas
+    DataSet = DM.QueryTurmas
     Left = 648
     Top = 120
   end

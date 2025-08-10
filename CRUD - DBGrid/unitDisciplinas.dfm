@@ -18,7 +18,8 @@ object DisciplinasPage: TDisciplinasPage
     Height = 642
     Align = alClient
     TabOrder = 0
-    ExplicitTop = 8
+    ExplicitWidth = 947
+    ExplicitHeight = 625
     object lblTituloDisciplinas: TLabel
       Left = 1
       Top = 1
@@ -80,48 +81,6 @@ object DisciplinasPage: TDisciplinasPage
       Width = 111
       Height = 15
       Caption = 'C'#243'digo da disciplina:'
-    end
-    object ToolBar1: TToolBar
-      AlignWithMargins = True
-      Left = 351
-      Top = 45
-      Width = 267
-      Align = alCustom
-      ButtonHeight = 26
-      Caption = 'ToolBar1'
-      Color = clSkyBlue
-      Customizable = True
-      GradientEndColor = clSkyBlue
-      GradientStartColor = clSkyBlue
-      HotTrackColor = clSkyBlue
-      ParentColor = False
-      TabOrder = 8
-      ExplicitLeft = 348
-      ExplicitTop = 42
-      object spdbtnIncluTurma: TSpeedButton
-        Left = 0
-        Top = 0
-        Width = 85
-        Height = 26
-        Align = alLeft
-        Caption = 'Incluir'
-      end
-      object spdbtnEditarTurma: TSpeedButton
-        Left = 85
-        Top = 0
-        Width = 90
-        Height = 26
-        Align = alClient
-        Caption = 'Editar'
-      end
-      object spdbtnExcluirTurma: TSpeedButton
-        Left = 175
-        Top = 0
-        Width = 90
-        Height = 26
-        Align = alRight
-        Caption = 'Excluir'
-      end
     end
     object RedEstud: TPanel
       Left = 122
@@ -215,7 +174,7 @@ object DisciplinasPage: TDisciplinasPage
       Cursor = crHandPoint
       DataSource = DataSourceDisciplinas
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
-      TabOrder = 9
+      TabOrder = 8
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
@@ -248,7 +207,7 @@ object DisciplinasPage: TDisciplinasPage
       Height = 23
       DataField = 'codigo_disciplina'
       DataSource = DataSourceDisciplinas
-      TabOrder = 10
+      TabOrder = 9
     end
     object dbedtCodDisciplina: TDBEdit
       Left = 440
@@ -257,7 +216,7 @@ object DisciplinasPage: TDisciplinasPage
       Height = 23
       DataField = 'codigo_turma'
       DataSource = DataSourceDisciplinas
-      TabOrder = 11
+      TabOrder = 10
       TextHint = '00000'
     end
     object ToolBar2: TToolBar
@@ -267,12 +226,63 @@ object DisciplinasPage: TDisciplinasPage
       Height = 29
       Align = alBottom
       Caption = 'ToolBar2'
+      TabOrder = 11
+      ExplicitTop = 595
+      ExplicitWidth = 945
+    end
+    object ToolBar1: TToolBar
+      AlignWithMargins = True
+      Left = 293
+      Top = 46
+      Width = 360
+      Height = 35
+      Align = alCustom
+      ButtonHeight = 26
+      Caption = 'ToolBar1'
+      Color = clSkyBlue
+      Customizable = True
+      GradientEndColor = clSkyBlue
+      GradientStartColor = clSkyBlue
+      HotTrackColor = clSkyBlue
+      ParentColor = False
       TabOrder = 12
-      ExplicitWidth = 865
+      ExplicitLeft = 290
+      ExplicitTop = 43
+      object spdbtnInclu: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 85
+        Height = 26
+        Align = alLeft
+        Caption = '&Incluir'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 85
+        Top = 0
+        Width = 90
+        Height = 26
+        Caption = '&Salvar'
+      end
+      object spdbtnEditar: TSpeedButton
+        Left = 175
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alClient
+        Caption = '&Editar'
+      end
+      object spdbtnExcluir: TSpeedButton
+        Left = 265
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alRight
+        Caption = 'E&xcluir'
+      end
     end
   end
   object DataSourceDisciplinas: TDataSource
-    DataSet = DataModule2.QueryTurmas
+    DataSet = DM.QueryTurmas
     Left = 648
     Top = 104
   end

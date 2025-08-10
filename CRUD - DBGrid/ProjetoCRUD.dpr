@@ -6,7 +6,7 @@ uses
   Vcl.Forms,
   unitTurmas in 'unitTurmas.pas' {TurmasPage},
   uMain in 'uMain.pas' {Form1},
-  oldDataModulePG in '..\oldDataModulePG.pas',
+  oldDataModulePG in '..\oldDataModulePG.pas' {DM},
   NaoUtilizado.DataModule in 'NaoUtilizado.DataModule.pas' {DataModule1: TDataModule},
   uDisciplinas in 'uDisciplinas.pas',
   uEstudantes in 'uEstudantes.pas',

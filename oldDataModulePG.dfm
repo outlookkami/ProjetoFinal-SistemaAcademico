@@ -1,4 +1,4 @@
-﻿object DataModule2: TDataModule2
+object DM: TDM
   Height = 720
   Width = 960
   PixelsPerInch = 144
@@ -77,7 +77,7 @@
     Left = 585
     Top = 345
   end
-  object QueryMatrículas: TFDQuery
+  object QueryMatriculas: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM matriculas;')

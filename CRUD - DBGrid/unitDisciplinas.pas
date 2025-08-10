@@ -18,10 +18,6 @@ type
     Label6: TLabel;
     lblNomeDisciplina: TLabel;
     lblCodigoDisc: TLabel;
-    ToolBar1: TToolBar;
-    spdbtnIncluTurma: TSpeedButton;
-    spdbtnEditarTurma: TSpeedButton;
-    spdbtnExcluirTurma: TSpeedButton;
     RedEstud: TPanel;
     RedMatri: TPanel;
     RedProfs: TPanel;
@@ -35,6 +31,11 @@ type
     dbedtCodDisciplina: TDBEdit;
     ToolBar2: TToolBar;
     DataSourceDisciplinas: TDataSource;
+    ToolBar1: TToolBar;
+    spdbtnInclu: TSpeedButton;
+    spdbtnEditar: TSpeedButton;
+    spdbtnExcluir: TSpeedButton;
+    SpeedButton1: TSpeedButton;
   private
     { Private declarations }
   public

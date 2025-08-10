@@ -27,9 +27,9 @@ type
     DBEdit6: TDBEdit;
     ToolBar1: TToolBar;
     DBGridTurmas: TDBGrid;
-    spdbtnIncluTurma: TSpeedButton;
-    spdbtnEditarTurma: TSpeedButton;
-    spdbtnExcluirTurma: TSpeedButton;
+    spdbtnInclu: TSpeedButton;
+    spdbtnEditar: TSpeedButton;
+    spdbtnExcluir: TSpeedButton;
     lblCodigoProfInclu: TLabel;
     lblCodigoDiscInclu: TLabel;
     lblCodigoTurmInclu: TLabel;
@@ -37,9 +37,13 @@ type
     dbedtCodProf: TDBEdit;
     dbedtCodDisci: TDBEdit;
     dbedtCodTurma: TDBEdit;
+    SpeedButton1: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure pnlBtnTurmasClick(Sender: TObject);
-    procedure spdbtnIncluTurmaClick(Sender: TObject);
+    procedure spdbtnIncluClick(Sender: TObject);
+    procedure spdbtnEditarClick(Sender: TObject);
+    procedure spdbtnExcluirClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -73,9 +77,24 @@ begin
      //QueryTurmas.SQL.Add('SELECT * FROM turmas;');
 end;
 
-procedure TTurmasPage.spdbtnIncluTurmaClick(Sender: TObject);
+procedure TTurmasPage.spdbtnEditarClick(Sender: TObject);
 begin
-    //DataSourceTurmas := Add('SELECT * FROM turmas;');
+     dm.QueryTurmas.Edit;
+end;
+
+procedure TTurmasPage.spdbtnExcluirClick(Sender: TObject);
+begin
+     dm.QueryTurmas.Delete;
+end;
+
+procedure TTurmasPage.spdbtnIncluClick(Sender: TObject);
+begin
+    dm.QueryTurmas.Insert;
+end;
+
+procedure TTurmasPage.SpeedButton1Click(Sender: TObject);
+begin
+    dm.QueryTurmas.Post;
 end;
 
 end.

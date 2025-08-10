@@ -18,7 +18,8 @@ object ProfessoresPage: TProfessoresPage
     Height = 643
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = -8
+    ExplicitWidth = 949
+    ExplicitHeight = 626
     object lblTituloProfessores: TLabel
       Left = 1
       Top = 1
@@ -233,8 +234,8 @@ object ProfessoresPage: TProfessoresPage
       Align = alBottom
       Caption = 'ToolBar2'
       TabOrder = 11
-      ExplicitTop = 612
-      ExplicitWidth = 865
+      ExplicitTop = 596
+      ExplicitWidth = 947
     end
     object dbedtNomeProfessor: TDBEdit
       Left = 440
@@ -244,52 +245,59 @@ object ProfessoresPage: TProfessoresPage
       DataField = 'codigo_disciplina'
       TabOrder = 12
     end
-  end
-  object ToolBar1: TToolBar
-    AlignWithMargins = True
-    Left = 354
-    Top = 48
-    Width = 271
-    Height = 27
-    Align = alCustom
-    ButtonHeight = 26
-    Caption = 'ToolBar1'
-    Color = clSkyBlue
-    Customizable = True
-    GradientEndColor = clSkyBlue
-    GradientStartColor = clSkyBlue
-    HotTrackColor = clSkyBlue
-    ParentColor = False
-    TabOrder = 1
-    ExplicitLeft = 351
-    ExplicitTop = 45
-    object spdbtnIncluTurma: TSpeedButton
-      Left = 0
-      Top = 0
-      Width = 85
-      Height = 26
-      Align = alLeft
-      Caption = 'Incluir'
-    end
-    object spdbtnEditarTurma: TSpeedButton
-      Left = 85
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alClient
-      Caption = 'Editar'
-    end
-    object spdbtnExcluirTurma: TSpeedButton
-      Left = 175
-      Top = 0
-      Width = 90
-      Height = 26
-      Align = alRight
-      Caption = 'Excluir'
+    object ToolBar1: TToolBar
+      AlignWithMargins = True
+      Left = 301
+      Top = 46
+      Width = 360
+      Height = 35
+      Align = alCustom
+      ButtonHeight = 26
+      Caption = 'ToolBar1'
+      Color = clSkyBlue
+      Customizable = True
+      GradientEndColor = clSkyBlue
+      GradientStartColor = clSkyBlue
+      HotTrackColor = clSkyBlue
+      ParentColor = False
+      TabOrder = 13
+      ExplicitLeft = 298
+      ExplicitTop = 43
+      object spdbtnInclu: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 85
+        Height = 26
+        Align = alLeft
+        Caption = '&Incluir'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 85
+        Top = 0
+        Width = 90
+        Height = 26
+        Caption = '&Salvar'
+      end
+      object spdbtnEditar: TSpeedButton
+        Left = 175
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alClient
+        Caption = '&Editar'
+      end
+      object spdbtnExcluir: TSpeedButton
+        Left = 265
+        Top = 0
+        Width = 90
+        Height = 26
+        Align = alRight
+        Caption = 'E&xcluir'
+      end
     end
   end
   object DataSourceProfessores: TDataSource
-    DataSet = DataModule2.QueryTurmas
+    DataSet = DM.QueryTurmas
     Left = 648
     Top = 120
   end

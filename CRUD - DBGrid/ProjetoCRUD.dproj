@@ -133,7 +133,9 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\oldDataModulePG.pas"/>
+        <DCCReference Include="..\oldDataModulePG.pas">
+            <Form>DM</Form>
+        </DCCReference>
         <DCCReference Include="NaoUtilizado.DataModule.pas">
             <Form>DataModule1</Form>
             <FormType>dfm</FormType>
