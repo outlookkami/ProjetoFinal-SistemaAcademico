@@ -16,7 +16,6 @@ type
     FDConnection1: TFDConnection;
     QueryTurmas: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    dsTurmas: TDataSource;
     QueryTurmascodigo_turma: TStringField;
     QueryTurmascodigo_disciplina: TStringField;
     QueryTurmascodigo_professor: TStringField;
@@ -24,10 +23,16 @@ type
     QueryEstudantes: TFDQuery;
     QueryProfessores: TFDQuery;
     QueryMatriculas: TFDQuery;
-    FDQuery1: TFDQuery;
-    StringField1: TStringField;
-    StringField2: TStringField;
-    StringField3: TStringField;
+    QueryDisciplinascodigo_disciplina: TStringField;
+    QueryDisciplinasnome_disciplina: TStringField;
+    QueryEstudantescodigo_estudante: TStringField;
+    QueryEstudantesnome_estudante: TStringField;
+    QueryProfessorescodigo_professor: TStringField;
+    QueryProfessoresnome_professor: TStringField;
+    QueryProfessorescpf: TStringField;
+    QueryMatriculascodigo_matricula: TStringField;
+    QueryMatriculascodigo_turma: TStringField;
+    QueryMatriculascodigo_estudante: TStringField;
   private
     { Private declarations }
   public

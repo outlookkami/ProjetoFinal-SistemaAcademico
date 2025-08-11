@@ -18,8 +18,6 @@ object ProfessoresPage: TProfessoresPage
     Height = 643
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 949
-    ExplicitHeight = 626
     object lblTituloProfessores: TLabel
       Left = 1
       Top = 1
@@ -113,14 +111,14 @@ object ProfessoresPage: TProfessoresPage
       ParentBackground = False
       TabOrder = 1
     end
-    object RedProfs: TPanel
+    object RedMatri: TPanel
       Left = 648
       Top = 575
       Width = 129
       Height = 33
       Cursor = crHandPoint
       Align = alCustom
-      Caption = 'Professores'
+      Caption = 'Matr'#237'culas'
       Color = clBisque
       ParentBackground = False
       TabOrder = 2
@@ -143,7 +141,6 @@ object ProfessoresPage: TProfessoresPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceProfessores
       TabOrder = 4
     end
     object DBEdit3: TDBEdit
@@ -152,7 +149,6 @@ object ProfessoresPage: TProfessoresPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceProfessores
       TabOrder = 5
     end
     object DBEdit5: TDBEdit
@@ -161,7 +157,6 @@ object ProfessoresPage: TProfessoresPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceProfessores
       TabOrder = 6
     end
     object DBEdit6: TDBEdit
@@ -170,7 +165,6 @@ object ProfessoresPage: TProfessoresPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceProfessores
       TabOrder = 7
     end
     object DBGridMatriculas: TDBGrid
@@ -190,30 +184,34 @@ object ProfessoresPage: TProfessoresPage
       Columns = <
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Turma'
-          Width = 210
+          FieldName = 'codigo_professor'
+          Title.Caption = 'C'#243'digo do professor'
+          Width = 163
           Visible = True
         end
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Disciplina'
-          Width = 211
+          FieldName = 'nome_professor'
+          Title.Caption = 'Nome do professor'
+          Width = 327
           Visible = True
         end
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo do Professor'
-          Width = 215
+          FieldName = 'cpf'
+          Title.Caption = 'CPF'
+          Width = 163
           Visible = True
         end>
     end
     object dbedtCPFProfessor: TDBEdit
       Left = 443
       Top = 171
-      Width = 121
+      Width = 113
       Height = 23
-      DataField = 'codigo_professor'
+      DataField = 'cpf'
       DataSource = DataSourceProfessores
+      MaxLength = 14
       TabOrder = 9
     end
     object dbedtCodProfessor: TDBEdit
@@ -221,7 +219,7 @@ object ProfessoresPage: TProfessoresPage
       Top = 98
       Width = 121
       Height = 23
-      DataField = 'codigo_turma'
+      DataField = 'codigo_professor'
       DataSource = DataSourceProfessores
       TabOrder = 10
       TextHint = '00000'
@@ -234,21 +232,20 @@ object ProfessoresPage: TProfessoresPage
       Align = alBottom
       Caption = 'ToolBar2'
       TabOrder = 11
-      ExplicitTop = 596
-      ExplicitWidth = 947
     end
     object dbedtNomeProfessor: TDBEdit
       Left = 440
       Top = 134
       Width = 121
       Height = 23
-      DataField = 'codigo_disciplina'
+      DataField = 'nome_professor'
+      DataSource = DataSourceProfessores
       TabOrder = 12
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 301
-      Top = 46
+      Left = 319
+      Top = 56
       Width = 360
       Height = 35
       Align = alCustom
@@ -261,8 +258,8 @@ object ProfessoresPage: TProfessoresPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 13
-      ExplicitLeft = 298
-      ExplicitTop = 43
+      ExplicitLeft = 301
+      ExplicitTop = 38
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -270,13 +267,15 @@ object ProfessoresPage: TProfessoresPage
         Height = 26
         Align = alLeft
         Caption = '&Incluir'
+        OnClick = spdbtnIncluClick
       end
-      object SpeedButton1: TSpeedButton
+      object spdbtnSalvar: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
         Caption = '&Salvar'
+        OnClick = spdbtnSalvarClick
       end
       object spdbtnEditar: TSpeedButton
         Left = 175
@@ -285,6 +284,7 @@ object ProfessoresPage: TProfessoresPage
         Height = 26
         Align = alClient
         Caption = '&Editar'
+        OnClick = spdbtnEditarClick
       end
       object spdbtnExcluir: TSpeedButton
         Left = 265
@@ -293,12 +293,13 @@ object ProfessoresPage: TProfessoresPage
         Height = 26
         Align = alRight
         Caption = 'E&xcluir'
+        OnClick = spdbtnExcluirClick
       end
     end
   end
   object DataSourceProfessores: TDataSource
-    DataSet = DM.QueryTurmas
-    Left = 648
+    DataSet = DM.QueryProfessores
+    Left = 632
     Top = 120
   end
 end

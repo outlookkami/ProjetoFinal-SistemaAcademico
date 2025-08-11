@@ -3,10 +3,11 @@ unit unitProfessores;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons, Vcl.ToolWin,
-  Vcl.ComCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, ADODB, Vcl.Mask,
+  System.Generics.Collections, Vcl.ComCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls,
+  oldDataModulePG;
 
 type
   TProfessoresPage = class(TForm)
@@ -21,7 +22,7 @@ type
     lblCodigoProf: TLabel;
     RedEstud: TPanel;
     RedTurmas: TPanel;
-    RedProfs: TPanel;
+    RedMatri: TPanel;
     RedDisci: TPanel;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
@@ -32,12 +33,20 @@ type
     dbedtCodProfessor: TDBEdit;
     ToolBar2: TToolBar;
     dbedtNomeProfessor: TDBEdit;
-    DataSourceProfessores: TDataSource;
     ToolBar1: TToolBar;
     spdbtnInclu: TSpeedButton;
     spdbtnEditar: TSpeedButton;
     spdbtnExcluir: TSpeedButton;
-    SpeedButton1: TSpeedButton;
+    spdbtnSalvar: TSpeedButton;
+    DataSourceProfessores: TDataSource;
+    procedure spdbtnIncluClick(Sender: TObject);
+    procedure spdbtnSalvarClick(Sender: TObject);
+    procedure spdbtnEditarClick(Sender: TObject);
+    procedure spdbtnExcluirClick(Sender: TObject);
+//    procedure RedEstudClick(Sender: TObject);
+//    procedure RedDisciClick(Sender: TObject);
+//    procedure RedTurmasClick(Sender: TObject);
+//    procedure RedMatriClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,5 +59,29 @@ var
 implementation
 
 {$R *.dfm}
+
+uses unitTurmas;
+
+//Botões
+
+procedure TProfessoresPage.spdbtnEditarClick(Sender: TObject);
+begin
+     dm.QueryProfessores.Edit;
+end;
+
+procedure TProfessoresPage.spdbtnExcluirClick(Sender: TObject);
+begin
+     dm.QueryProfessores.Delete;
+end;
+
+procedure TProfessoresPage.spdbtnIncluClick(Sender: TObject);
+begin
+    dm.QueryProfessores.Insert;
+end;
+
+procedure TProfessoresPage.spdbtnSalvarClick(Sender: TObject);
+begin
+    dm.QueryProfessores.Post;
+end;
 
 end.

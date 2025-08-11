@@ -27,7 +27,6 @@ type
     DBEdit6: TDBEdit;
     ToolBar1: TToolBar;
     DBGridTurmas: TDBGrid;
-    spdbtnIncluTurma: TSpeedButton;
     spdbtnEditarTurma: TSpeedButton;
     spdbtnExcluirTurma: TSpeedButton;
     lblCodigoProfInclu: TLabel;
@@ -39,7 +38,6 @@ type
     dbedtCodTurma: TDBEdit;
     procedure FormCreate(Sender: TObject);
     procedure pnlBtnTurmasClick(Sender: TObject);
-    procedure spdbtnIncluTurmaClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -47,8 +45,8 @@ type
     { Public declarations }
     var
       codigo_turma: String;
-      codigo_professor: String; //Vai receber o código do Professor da uProfessor
-      codigo_disciplina: String; //Vai receber o código da Disciplina da uDisciplina
+      codigo_professor: String; //Vai receber o cï¿½digo do Professor da uProfessor
+      codigo_disciplina: String; //Vai receber o cï¿½digo da Disciplina da uDisciplina
 
       listaTurmas: TObjectList<TTurmasPage>;
   end;
@@ -71,11 +69,6 @@ procedure TTurmasPage.pnlBtnTurmasClick(Sender: TObject);
 begin
      DBGridTurmas.DataSource := DataSourceTurmas;
      //QueryTurmas.SQL.Add('SELECT * FROM turmas;');
-end;
-
-procedure TTurmasPage.spdbtnIncluTurmaClick(Sender: TObject);
-begin
-    //DataSourceTurmas := Add('SELECT * FROM turmas;');
 end;
 
 end.

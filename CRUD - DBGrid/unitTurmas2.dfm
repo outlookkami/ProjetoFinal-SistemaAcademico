@@ -107,15 +107,7 @@ object TurmasPage: TTurmasPage
       TabOrder = 8
       ExplicitLeft = 300
       ExplicitTop = 42
-      object spdbtnIncluTurma: TSpeedButton
-        Left = 0
-        Top = 0
-        Width = 85
-        Height = 26
-        Align = alLeft
-        Caption = 'Incluir'
-        OnClick = spdbtnIncluTurmaClick
-      end
+  
       object spdbtnEditarTurma: TSpeedButton
         Left = 85
         Top = 0

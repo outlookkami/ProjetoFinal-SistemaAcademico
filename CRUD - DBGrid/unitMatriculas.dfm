@@ -18,8 +18,8 @@ object MatriculasPage: TMatriculasPage
     Height = 642
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 861
-    ExplicitHeight = 625
+    ExplicitLeft = 24
+    ExplicitTop = 8
     object lblTituloMatriculas: TLabel
       Left = 1
       Top = 1
@@ -190,20 +190,24 @@ object MatriculasPage: TMatriculasPage
       Columns = <
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Turma'
-          Width = 210
+          FieldName = 'codigo_matricula'
+          ImeName = 'C'#243'digo matr'#237'cula'
+          Title.Caption = 'C'#243'digo da matr'#237'cula'
+          Width = 218
           Visible = True
         end
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Disciplina'
-          Width = 211
+          FieldName = 'codigo_turma'
+          Title.Caption = 'C'#243'digo da turma'
+          Width = 218
           Visible = True
         end
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo do Professor'
-          Width = 215
+          FieldName = 'codigo_estudante'
+          Title.Caption = 'C'#243'digo do estudante'
+          Width = 218
           Visible = True
         end>
     end
@@ -212,7 +216,7 @@ object MatriculasPage: TMatriculasPage
       Top = 171
       Width = 121
       Height = 23
-      DataField = 'codigo_professor'
+      DataField = 'codigo_estudante'
       DataSource = DataSourceMatriculas
       TabOrder = 9
     end
@@ -221,7 +225,7 @@ object MatriculasPage: TMatriculasPage
       Top = 98
       Width = 121
       Height = 23
-      DataField = 'codigo_turma'
+      DataField = 'codigo_matricula'
       DataSource = DataSourceMatriculas
       TabOrder = 10
       TextHint = '00000'
@@ -231,13 +235,14 @@ object MatriculasPage: TMatriculasPage
       Top = 134
       Width = 121
       Height = 23
-      DataField = 'codigo_disciplina'
+      DataField = 'codigo_turma'
+      DataSource = DataSourceMatriculas
       TabOrder = 11
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 253
-      Top = 35
+      Left = 259
+      Top = 41
       Width = 360
       Height = 35
       Align = alCustom
@@ -250,8 +255,6 @@ object MatriculasPage: TMatriculasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 12
-      ExplicitLeft = 250
-      ExplicitTop = 32
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -260,12 +263,13 @@ object MatriculasPage: TMatriculasPage
         Align = alLeft
         Caption = '&Incluir'
       end
-      object SpeedButton1: TSpeedButton
+      object spdbtnSalvar: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
         Caption = '&Salvar'
+        OnClick = spdbtnSalvarClick
       end
       object spdbtnEditar: TSpeedButton
         Left = 175
@@ -274,6 +278,7 @@ object MatriculasPage: TMatriculasPage
         Height = 26
         Align = alClient
         Caption = '&Editar'
+        OnClick = spdbtnEditarClick
       end
       object spdbtnExcluir: TSpeedButton
         Left = 265
@@ -282,11 +287,12 @@ object MatriculasPage: TMatriculasPage
         Height = 26
         Align = alRight
         Caption = 'E&xcluir'
+        OnClick = spdbtnExcluirClick
       end
     end
   end
   object DataSourceMatriculas: TDataSource
-    DataSet = DM.QueryTurmas
+    DataSet = DM.QueryMatriculas
     Left = 656
     Top = 96
   end

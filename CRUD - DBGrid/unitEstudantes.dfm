@@ -18,8 +18,8 @@ object EstudantesPage: TEstudantesPage
     Height = 670
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 871
-    ExplicitHeight = 653
+    ExplicitLeft = 8
+    ExplicitTop = 8
     object lblTituloEstudantes: TLabel
       Left = 1
       Top = 1
@@ -68,12 +68,12 @@ object EstudantesPage: TEstudantesPage
       Caption = 'codigo_professor'
       FocusControl = DBEdit6
     end
-    object lblCodigoTurmaInclu: TLabel
+    object lblNomeEstudante: TLabel
       Left = 338
       Top = 153
-      Width = 93
+      Width = 108
       Height = 15
-      Caption = 'C'#243'digo da turma:'
+      Caption = 'Nome do estudante:'
     end
     object lblCodEstudante: TLabel
       Left = 337
@@ -136,7 +136,6 @@ object EstudantesPage: TEstudantesPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceEstudantes
       TabOrder = 4
     end
     object DBEdit3: TDBEdit
@@ -145,7 +144,6 @@ object EstudantesPage: TEstudantesPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceEstudantes
       TabOrder = 5
     end
     object DBEdit5: TDBEdit
@@ -154,7 +152,6 @@ object EstudantesPage: TEstudantesPage
       Width = 64
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceEstudantes
       TabOrder = 6
     end
     object DBEdit6: TDBEdit
@@ -163,7 +160,6 @@ object EstudantesPage: TEstudantesPage
       Width = 79
       Height = 23
       DataField = 'codigo_professor'
-      DataSource = DataSourceEstudantes
       TabOrder = 7
     end
     object DBGridMatriculas: TDBGrid
@@ -183,20 +179,16 @@ object EstudantesPage: TEstudantesPage
       Columns = <
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Turma'
-          Width = 210
+          FieldName = 'codigo_estudante'
+          Title.Caption = 'C'#243'digo do estudante'
+          Width = 326
           Visible = True
         end
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Disciplina'
-          Width = 211
-          Visible = True
-        end
-        item
-          Expanded = False
-          Title.Caption = 'C'#243'digo do Professor'
-          Width = 215
+          FieldName = 'nome_estudante'
+          Title.Caption = 'Nome do estudante'
+          Width = 326
           Visible = True
         end>
     end
@@ -205,23 +197,24 @@ object EstudantesPage: TEstudantesPage
       Top = 113
       Width = 121
       Height = 23
-      DataField = 'codigo_turma'
+      DataField = 'codigo_estudante'
       DataSource = DataSourceEstudantes
       TabOrder = 9
       TextHint = '00000'
     end
     object dbedtNomeEstudante: TDBEdit
-      Left = 455
+      Left = 463
       Top = 150
       Width = 121
       Height = 23
-      DataField = 'codigo_disciplina'
+      DataField = 'nome_estudante'
+      DataSource = DataSourceEstudantes
       TabOrder = 10
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 266
-      Top = 35
+      Left = 302
+      Top = 71
       Width = 360
       Height = 35
       Align = alCustom
@@ -234,8 +227,8 @@ object EstudantesPage: TEstudantesPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 11
-      ExplicitLeft = 263
-      ExplicitTop = 32
+      ExplicitLeft = 272
+      ExplicitTop = 41
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -243,13 +236,15 @@ object EstudantesPage: TEstudantesPage
         Height = 26
         Align = alLeft
         Caption = '&Incluir'
+        OnClick = spdbtnIncluClick
       end
-      object SpeedButton1: TSpeedButton
+      object spdbtnSalvar: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
         Caption = '&Salvar'
+        OnClick = spdbtnSalvarClick
       end
       object spdbtnEditar: TSpeedButton
         Left = 175
@@ -258,6 +253,7 @@ object EstudantesPage: TEstudantesPage
         Height = 26
         Align = alClient
         Caption = '&Editar'
+        OnClick = spdbtnEditarClick
       end
       object spdbtnExcluir: TSpeedButton
         Left = 265
@@ -266,12 +262,13 @@ object EstudantesPage: TEstudantesPage
         Height = 26
         Align = alRight
         Caption = 'E&xcluir'
+        OnClick = spdbtnExcluirClick
       end
     end
   end
   object DataSourceEstudantes: TDataSource
-    DataSet = DM.QueryTurmas
-    Left = 648
-    Top = 120
+    DataSet = DM.QueryEstudantes
+    Left = 656
+    Top = 128
   end
 end

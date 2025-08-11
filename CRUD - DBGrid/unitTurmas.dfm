@@ -19,8 +19,6 @@ object TurmasPage: TTurmasPage
     Height = 757
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 861
-    ExplicitHeight = 740
     object lblTituloTurmas: TLabel
       Left = 1
       Top = 1
@@ -92,8 +90,8 @@ object TurmasPage: TTurmasPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 269
-      Top = 50
+      Left = 272
+      Top = 41
       Width = 360
       Height = 35
       Align = alCustom
@@ -106,8 +104,8 @@ object TurmasPage: TTurmasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 8
-      ExplicitLeft = 266
-      ExplicitTop = 47
+      ExplicitLeft = 269
+      ExplicitTop = 38
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -117,13 +115,13 @@ object TurmasPage: TTurmasPage
         Caption = '&Incluir'
         OnClick = spdbtnIncluClick
       end
-      object SpeedButton1: TSpeedButton
+      object spdbtnSalvar: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
         Caption = '&Salvar'
-        OnClick = SpeedButton1Click
+        OnClick = spdbtnSalvarClick
       end
       object spdbtnEditar: TSpeedButton
         Left = 175
@@ -155,6 +153,7 @@ object TurmasPage: TTurmasPage
       Color = clBisque
       ParentBackground = False
       TabOrder = 0
+      OnClick = RedEstudClick
     end
     object RedMatri: TPanel
       Left = 455
@@ -298,8 +297,6 @@ object TurmasPage: TTurmasPage
       Align = alBottom
       Caption = 'ToolBar2'
       TabOrder = 13
-      ExplicitTop = 710
-      ExplicitWidth = 859
     end
   end
   object DataSourceTurmas: TDataSource

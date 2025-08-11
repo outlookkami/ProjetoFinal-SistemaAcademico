@@ -3,10 +3,11 @@ unit unitEstudantes;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids, System.Generics.Collections,
-  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.ToolWin, Vcl.ComCtrls,
-  Vcl.Buttons;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, ADODB, Vcl.Mask,
+  System.Generics.Collections, Vcl.ComCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls,
+  oldDataModulePG;
 
 type
   TEstudantesPage = class(TForm)
@@ -16,7 +17,7 @@ type
     Label3: TLabel;
     Label5: TLabel;
     Label6: TLabel;
-    lblCodigoTurmaInclu: TLabel;
+    lblNomeEstudante: TLabel;
     lblCodEstudante: TLabel;
     RedMatri: TPanel;
     RedTurmas: TPanel;
@@ -29,12 +30,16 @@ type
     DBGridMatriculas: TDBGrid;
     dbedtCodEstudante: TDBEdit;
     dbedtNomeEstudante: TDBEdit;
-    DataSourceEstudantes: TDataSource;
     ToolBar1: TToolBar;
     spdbtnInclu: TSpeedButton;
     spdbtnEditar: TSpeedButton;
     spdbtnExcluir: TSpeedButton;
-    SpeedButton1: TSpeedButton;
+    spdbtnSalvar: TSpeedButton;
+    DataSourceEstudantes: TDataSource;
+    procedure spdbtnIncluClick(Sender: TObject);
+    procedure spdbtnSalvarClick(Sender: TObject);
+    procedure spdbtnEditarClick(Sender: TObject);
+    procedure spdbtnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,5 +57,26 @@ var
 implementation
 
 {$R *.dfm}
+
+//Botões
+procedure TEstudantesPage.spdbtnEditarClick(Sender: TObject);
+begin
+     dm.QueryEstudantes.Edit;
+end;
+
+procedure TEstudantesPage.spdbtnExcluirClick(Sender: TObject);
+begin
+     dm.QueryEstudantes.Delete;
+end;
+
+procedure TEstudantesPage.spdbtnIncluClick(Sender: TObject);
+begin
+    dm.QueryEstudantes.Insert;
+end;
+
+procedure TEstudantesPage.spdbtnSalvarClick(Sender: TObject);
+begin
+    dm.QueryEstudantes.Post;
+end;
 
 end.

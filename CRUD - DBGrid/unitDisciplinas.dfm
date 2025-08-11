@@ -18,8 +18,6 @@ object DisciplinasPage: TDisciplinasPage
     Height = 642
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 947
-    ExplicitHeight = 625
     object lblTituloDisciplinas: TLabel
       Left = 1
       Top = 1
@@ -183,20 +181,17 @@ object DisciplinasPage: TDisciplinasPage
       Columns = <
         item
           Expanded = False
-          Title.Caption = 'C'#243'digo da Turma'
-          Width = 210
+          FieldName = 'codigo_disciplina'
+          Title.Caption = 'C'#243'digo da disciplina'
+          Width = 326
           Visible = True
         end
         item
+          Alignment = taCenter
           Expanded = False
-          Title.Caption = 'C'#243'digo da Disciplina'
-          Width = 211
-          Visible = True
-        end
-        item
-          Expanded = False
-          Title.Caption = 'C'#243'digo do Professor'
-          Width = 215
+          FieldName = 'nome_disciplina'
+          Title.Caption = 'Nome da disciplina'
+          Width = 326
           Visible = True
         end>
     end
@@ -205,7 +200,7 @@ object DisciplinasPage: TDisciplinasPage
       Top = 150
       Width = 121
       Height = 23
-      DataField = 'codigo_disciplina'
+      DataField = 'nome_disciplina'
       DataSource = DataSourceDisciplinas
       TabOrder = 9
     end
@@ -214,7 +209,7 @@ object DisciplinasPage: TDisciplinasPage
       Top = 114
       Width = 121
       Height = 23
-      DataField = 'codigo_turma'
+      DataField = 'codigo_disciplina'
       DataSource = DataSourceDisciplinas
       TabOrder = 10
       TextHint = '00000'
@@ -227,13 +222,11 @@ object DisciplinasPage: TDisciplinasPage
       Align = alBottom
       Caption = 'ToolBar2'
       TabOrder = 11
-      ExplicitTop = 595
-      ExplicitWidth = 945
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 293
-      Top = 46
+      Left = 311
+      Top = 64
       Width = 360
       Height = 35
       Align = alCustom
@@ -246,8 +239,8 @@ object DisciplinasPage: TDisciplinasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 12
-      ExplicitLeft = 290
-      ExplicitTop = 43
+      ExplicitLeft = 299
+      ExplicitTop = 52
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -255,13 +248,15 @@ object DisciplinasPage: TDisciplinasPage
         Height = 26
         Align = alLeft
         Caption = '&Incluir'
+        OnClick = spdbtnIncluClick
       end
-      object SpeedButton1: TSpeedButton
+      object spdbtnSalvar: TSpeedButton
         Left = 85
         Top = 0
         Width = 90
         Height = 26
         Caption = '&Salvar'
+        OnClick = spdbtnSalvarClick
       end
       object spdbtnEditar: TSpeedButton
         Left = 175
@@ -270,6 +265,7 @@ object DisciplinasPage: TDisciplinasPage
         Height = 26
         Align = alClient
         Caption = '&Editar'
+        OnClick = spdbtnEditarClick
       end
       object spdbtnExcluir: TSpeedButton
         Left = 265
@@ -278,11 +274,12 @@ object DisciplinasPage: TDisciplinasPage
         Height = 26
         Align = alRight
         Caption = 'E&xcluir'
+        OnClick = spdbtnExcluirClick
       end
     end
   end
   object DataSourceDisciplinas: TDataSource
-    DataSet = DM.QueryTurmas
+    DataSet = DM.QueryDisciplinas
     Left = 648
     Top = 104
   end

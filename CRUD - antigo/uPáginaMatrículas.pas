@@ -1,18 +1,18 @@
-unit uPáginaMatrículas;
+unit uPï¿½ginaMatrï¿½culas;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.ExtCtrls, uAluno, uTurma, Vcl.Buttons, Vcl.DBCtrls;
+  Vcl.StdCtrls, Vcl.ExtCtrls, uAluno, Vcl.Buttons, Vcl.DBCtrls;
 
 type
-  TformPáginaMatrículas = class(TForm)
+  TformPï¿½ginaMatrï¿½culas = class(TForm)
     pnlTurmas: TPanel;
     lblPagInicial: TLabel;
-    lblMatrículas: TLabel;
-    lblCodigoMatrícula: TLabel;
+    lblMatrï¿½culas: TLabel;
+    lblCodigoMatrï¿½cula: TLabel;
     lblCodigoAlunoMatr: TLabel;
     lblCodigoTurmaMatr: TLabel;
     edtPesquisaCodigoTurma: TEdit;
@@ -20,7 +20,7 @@ type
     edtPesquisaTurmaCodDisc: TEdit;
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
-    procedure lblMatrículasClick(Sender: TObject);
+    procedure lblMatrï¿½culasClick(Sender: TObject);
     procedure lblCodigoAlunoMatrClick(Sender: TObject);
     procedure lblCodigoTurmaMatrClick(Sender: TObject);
   private
@@ -30,7 +30,7 @@ type
   end;
 
 var
-  formPáginaMatrículas: TformPáginaMatrículas;
+  formPï¿½ginaMatrï¿½culas: TformPï¿½ginaMatrï¿½culas;
 
 implementation
 
