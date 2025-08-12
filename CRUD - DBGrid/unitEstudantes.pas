@@ -61,22 +61,22 @@ implementation
 //Botões
 procedure TEstudantesPage.spdbtnEditarClick(Sender: TObject);
 begin
-     dm.QueryEstudantes.Edit;
+   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Edit;
 end;
 
 procedure TEstudantesPage.spdbtnExcluirClick(Sender: TObject);
 begin
-     dm.QueryEstudantes.Delete;
+   if (dm<>nil) and (dm.QueryEstudantes<>nil) then  dm.QueryEstudantes.Delete;
 end;
 
 procedure TEstudantesPage.spdbtnIncluClick(Sender: TObject);
 begin
-    dm.QueryEstudantes.Insert;
+  if (dm<>nil) and (dm.QueryEstudantes<>nil) then  dm.QueryEstudantes.Insert;
 end;
 
 procedure TEstudantesPage.spdbtnSalvarClick(Sender: TObject);
 begin
-    dm.QueryEstudantes.Post;
+   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Post;
 end;
 
 end.

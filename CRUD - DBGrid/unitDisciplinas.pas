@@ -6,10 +6,12 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
   Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons, Vcl.ToolWin,
-  Vcl.ComCtrls, oldDataModulePG; //unitTurmas, unitEstudantes, unitProfessores, unitMatriculas;
+  Vcl.ComCtrls, oldDataModulePG, Datasnap.DBClient;
 
 type
   TDisciplinasPage = class(TForm)
+    DataSourceDisciplinas: TDataSource;
+    ClientDataSet1: TClientDataSet;
     pnlDisciplinas: TPanel;
     lblTituloDisciplinas: TLabel;
     Label2: TLabel;
@@ -22,24 +24,20 @@ type
     RedMatri: TPanel;
     RedProfs: TPanel;
     RedTurmas: TPanel;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
     DBGridDisciplinas: TDBGrid;
     dbedtNomeDisciplina: TDBEdit;
     dbedtCodDisciplina: TDBEdit;
     ToolBar2: TToolBar;
-    DataSourceDisciplinas: TDataSource;
     ToolBar1: TToolBar;
     spdbtnInclu: TSpeedButton;
+    spdbtnSalvar: TSpeedButton;
     spdbtnEditar: TSpeedButton;
     spdbtnExcluir: TSpeedButton;
-    spdbtnSalvar: TSpeedButton;
     procedure spdbtnIncluClick(Sender: TObject);
     procedure spdbtnSalvarClick(Sender: TObject);
     procedure spdbtnEditarClick(Sender: TObject);
     procedure spdbtnExcluirClick(Sender: TObject);
+    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
   private
     { Private declarations }
   public
@@ -49,28 +47,41 @@ type
 var
   DisciplinasPage: TDisciplinasPage;
 
+  codigo_disciplina: String;
+  nome_disciplina: String;
+
 implementation
 
 {$R *.dfm}
 
 // Botões
+procedure TDisciplinasPage.DBNavigator1Click(Sender: TObject;
+  Button: TNavigateBtn);
+begin
+    // DBNavigator1.Insert;
+end;
+
 procedure TDisciplinasPage.spdbtnEditarClick(Sender: TObject);
 begin
+     dm.QueryDisciplinas.Open;
      dm.QueryDisciplinas.Edit;
 end;
 
 procedure TDisciplinasPage.spdbtnExcluirClick(Sender: TObject);
 begin
+     dm.QueryDisciplinas.Open;
      dm.QueryDisciplinas.Delete;
 end;
 
 procedure TDisciplinasPage.spdbtnIncluClick(Sender: TObject);
 begin
+    dm.QueryDisciplinas.Open;
     dm.QueryDisciplinas.Insert;
 end;
 
 procedure TDisciplinasPage.spdbtnSalvarClick(Sender: TObject);
 begin
+    dm.QueryDisciplinas.Open;
     dm.QueryDisciplinas.Post;
 end;
 

@@ -90,8 +90,8 @@ object TurmasPage: TTurmasPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 272
-      Top = 41
+      Left = 278
+      Top = 47
       Width = 360
       Height = 35
       Align = alCustom
@@ -104,8 +104,6 @@ object TurmasPage: TTurmasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 8
-      ExplicitLeft = 269
-      ExplicitTop = 38
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0

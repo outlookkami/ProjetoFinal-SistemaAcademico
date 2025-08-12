@@ -17,12 +17,12 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-
+  Application.CreateForm(TDM, DM);
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TTurmasPage, TurmasPage);
-  Application.CreateForm(TMatriculasPage, MatriculasPage);
-  Application.CreateForm(TDisciplinasPage, DisciplinasPage);
   Application.CreateForm(TProfessoresPage, ProfessoresPage);
   Application.CreateForm(TEstudantesPage, EstudantesPage);
+  Application.CreateForm(TDisciplinasPage, DisciplinasPage);
+  Application.CreateForm(TMatriculasPage, MatriculasPage);
   Application.Run;
 end.

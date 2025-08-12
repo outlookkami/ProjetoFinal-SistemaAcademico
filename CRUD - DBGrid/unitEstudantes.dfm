@@ -18,8 +18,6 @@ object EstudantesPage: TEstudantesPage
     Height = 670
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
     object lblTituloEstudantes: TLabel
       Left = 1
       Top = 1
@@ -213,8 +211,8 @@ object EstudantesPage: TEstudantesPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 302
-      Top = 71
+      Left = 308
+      Top = 77
       Width = 360
       Height = 35
       Align = alCustom
@@ -227,8 +225,6 @@ object EstudantesPage: TEstudantesPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 11
-      ExplicitLeft = 272
-      ExplicitTop = 41
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0

@@ -167,7 +167,7 @@ object ProfessoresPage: TProfessoresPage
       DataField = 'codigo_professor'
       TabOrder = 7
     end
-    object DBGridMatriculas: TDBGrid
+    object DBGridProfessores: TDBGrid
       Left = 106
       Top = 224
       Width = 655
@@ -204,48 +204,10 @@ object ProfessoresPage: TProfessoresPage
           Visible = True
         end>
     end
-    object dbedtCPFProfessor: TDBEdit
-      Left = 443
-      Top = 171
-      Width = 113
-      Height = 23
-      DataField = 'cpf'
-      DataSource = DataSourceProfessores
-      MaxLength = 14
-      TabOrder = 9
-    end
-    object dbedtCodProfessor: TDBEdit
-      Left = 439
-      Top = 98
-      Width = 121
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceProfessores
-      TabOrder = 10
-      TextHint = '00000'
-    end
-    object ToolBar2: TToolBar
-      Left = 1
-      Top = 613
-      Width = 953
-      Height = 29
-      Align = alBottom
-      Caption = 'ToolBar2'
-      TabOrder = 11
-    end
-    object dbedtNomeProfessor: TDBEdit
-      Left = 440
-      Top = 134
-      Width = 121
-      Height = 23
-      DataField = 'nome_professor'
-      DataSource = DataSourceProfessores
-      TabOrder = 12
-    end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 319
-      Top = 56
+      Left = 318
+      Top = 47
       Width = 360
       Height = 35
       Align = alCustom
@@ -257,9 +219,8 @@ object ProfessoresPage: TProfessoresPage
       GradientStartColor = clSkyBlue
       HotTrackColor = clSkyBlue
       ParentColor = False
-      TabOrder = 13
-      ExplicitLeft = 301
-      ExplicitTop = 38
+      TabOrder = 9
+      OnClick = ToolBar1Click
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -296,10 +257,62 @@ object ProfessoresPage: TProfessoresPage
         OnClick = spdbtnExcluirClick
       end
     end
+    object DBEdit1: TDBEdit
+      Left = 434
+      Top = 134
+      Width = 229
+      Height = 23
+      DataField = 'nome_professor'
+      DataSource = DataSourceProfessores
+      TabOrder = 10
+    end
+    object DBEdit4: TDBEdit
+      Left = 439
+      Top = 100
+      Width = 117
+      Height = 23
+      DataField = 'codigo_professor'
+      DataSource = DataSourceProfessores
+      TabOrder = 11
+    end
+    object DBEdit7: TDBEdit
+      Left = 425
+      Top = 171
+      Width = 131
+      Height = 23
+      DataField = 'cpf'
+      DataSource = DataSourceProfessores
+      MaxLength = 14
+      TabOrder = 12
+    end
   end
   object DataSourceProfessores: TDataSource
     DataSet = DM.QueryProfessores
-    Left = 632
-    Top = 120
+    Left = 736
+    Top = 96
+  end
+  object ClientDataSetProfs: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 736
+    Top = 160
+    object ClientDataSetProfscodigo_professor: TStringField
+      FieldName = 'codigo_professor'
+      LookupDataSet = DM.QueryProfessores
+      Origin = 'codigo_professor'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      FixedChar = True
+      Size = 5
+    end
+    object ClientDataSetProfsnome_professor: TStringField
+      FieldName = 'nome_professor'
+      Origin = 'nome_professor'
+      Size = 24
+    end
+    object ClientDataSetProfscpf: TStringField
+      FieldName = 'cpf'
+      Origin = 'cpf'
+      Size = 11
+    end
   end
 end

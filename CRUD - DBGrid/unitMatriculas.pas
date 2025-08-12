@@ -23,10 +23,6 @@ type
     RedTurmas: TPanel;
     RedProfs: TPanel;
     RedDisci: TPanel;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
     DBGridMatriculas: TDBGrid;
     DataSourceMatriculas: TDataSource;
     dbedtCodEstud: TDBEdit;
@@ -64,9 +60,6 @@ var
 implementation
 
 {$R *.dfm}
-
-uses unitTurmas;
-
 
 procedure TMatriculasPage.FormCreate(Sender: TObject);
 begin

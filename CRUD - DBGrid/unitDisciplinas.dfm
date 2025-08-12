@@ -40,7 +40,6 @@ object DisciplinasPage: TDisciplinasPage
       Width = 92
       Height = 15
       Caption = 'codigo_disciplina'
-      FocusControl = DBEdit2
     end
     object Label3: TLabel
       Left = 280
@@ -48,7 +47,6 @@ object DisciplinasPage: TDisciplinasPage
       Width = 91
       Height = 15
       Caption = 'codigo_professor'
-      FocusControl = DBEdit3
     end
     object Label5: TLabel
       Left = 216
@@ -56,7 +54,6 @@ object DisciplinasPage: TDisciplinasPage
       Width = 92
       Height = 15
       Caption = 'codigo_disciplina'
-      FocusControl = DBEdit5
     end
     object Label6: TLabel
       Left = 216
@@ -64,7 +61,6 @@ object DisciplinasPage: TDisciplinasPage
       Width = 91
       Height = 15
       Caption = 'codigo_professor'
-      FocusControl = DBEdit6
     end
     object lblNomeDisciplina: TLabel
       Left = 324
@@ -128,51 +124,14 @@ object DisciplinasPage: TDisciplinasPage
       ParentBackground = False
       TabOrder = 3
     end
-    object DBEdit2: TDBEdit
-      Left = 280
-      Top = 1264
-      Width = 64
-      Height = 23
-      DataField = 'codigo_disciplina'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 4
-    end
-    object DBEdit3: TDBEdit
-      Left = 280
-      Top = 1848
-      Width = 79
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 5
-    end
-    object DBEdit5: TDBEdit
-      Left = 216
-      Top = 1176
-      Width = 64
-      Height = 23
-      DataField = 'codigo_disciplina'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 6
-    end
-    object DBEdit6: TDBEdit
-      Left = 216
-      Top = 1760
-      Width = 79
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 7
-    end
     object DBGridDisciplinas: TDBGrid
       Left = 146
       Top = 216
       Width = 655
       Height = 313
       Cursor = crHandPoint
-      DataSource = DataSourceDisciplinas
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
-      TabOrder = 8
+      TabOrder = 4
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
@@ -201,8 +160,7 @@ object DisciplinasPage: TDisciplinasPage
       Width = 121
       Height = 23
       DataField = 'nome_disciplina'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 9
+      TabOrder = 5
     end
     object dbedtCodDisciplina: TDBEdit
       Left = 440
@@ -210,8 +168,7 @@ object DisciplinasPage: TDisciplinasPage
       Width = 121
       Height = 23
       DataField = 'codigo_disciplina'
-      DataSource = DataSourceDisciplinas
-      TabOrder = 10
+      TabOrder = 6
       TextHint = '00000'
     end
     object ToolBar2: TToolBar
@@ -221,14 +178,14 @@ object DisciplinasPage: TDisciplinasPage
       Height = 29
       Align = alBottom
       Caption = 'ToolBar2'
-      TabOrder = 11
+      TabOrder = 7
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 311
-      Top = 64
+      Left = 336
+      Top = 67
       Width = 360
-      Height = 35
+      Height = 31
       Align = alCustom
       ButtonHeight = 26
       Caption = 'ToolBar1'
@@ -238,9 +195,7 @@ object DisciplinasPage: TDisciplinasPage
       GradientStartColor = clSkyBlue
       HotTrackColor = clSkyBlue
       ParentColor = False
-      TabOrder = 12
-      ExplicitLeft = 299
-      ExplicitTop = 52
+      TabOrder = 8
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -281,6 +236,12 @@ object DisciplinasPage: TDisciplinasPage
   object DataSourceDisciplinas: TDataSource
     DataSet = DM.QueryDisciplinas
     Left = 648
-    Top = 104
+    Top = 88
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 632
+    Top = 152
   end
 end

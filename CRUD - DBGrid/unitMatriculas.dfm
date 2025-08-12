@@ -137,42 +137,6 @@ object MatriculasPage: TMatriculasPage
       ParentBackground = False
       TabOrder = 3
     end
-    object DBEdit2: TDBEdit
-      Left = 280
-      Top = 1264
-      Width = 64
-      Height = 23
-      DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
-      TabOrder = 4
-    end
-    object DBEdit3: TDBEdit
-      Left = 280
-      Top = 1848
-      Width = 79
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
-      TabOrder = 5
-    end
-    object DBEdit5: TDBEdit
-      Left = 216
-      Top = 1176
-      Width = 64
-      Height = 23
-      DataField = 'codigo_disciplina'
-      DataSource = DataSourceMatriculas
-      TabOrder = 6
-    end
-    object DBEdit6: TDBEdit
-      Left = 216
-      Top = 1760
-      Width = 79
-      Height = 23
-      DataField = 'codigo_professor'
-      DataSource = DataSourceMatriculas
-      TabOrder = 7
-    end
     object DBGridMatriculas: TDBGrid
       Left = 106
       Top = 224

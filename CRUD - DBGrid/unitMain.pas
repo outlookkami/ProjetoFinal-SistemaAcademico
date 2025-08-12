@@ -41,36 +41,26 @@ implementation
 
 procedure TForm1.RedMainDisciClick(Sender: TObject);
 begin
-  var
-    DisciplinasPage := TDisciplinasPage.Create(Self);
     DisciplinasPage.Show;
 end;
 
 procedure TForm1.RedMainEstudClick(Sender: TObject);
 begin
-  var
-    EstudantesPage := TEstudantesPage.Create(Self);
     EstudantesPage.Show;
 end;
 
 procedure TForm1.RedMainMatriClick(Sender: TObject);
 begin
-  var
-    MatriculasPage := TMatriculasPage.Create(Self);
     MatriculasPage.Show;
 end;
 
 procedure TForm1.RedMainProfsClick(Sender: TObject);
 begin
-  var
-    ProfessoresPage := TProfessoresPage.Create(Self);
-    ProfessoresPage.Show;
+  ProfessoresPage.Show;
 end;
 
 procedure TForm1.RedMainTurmasClick(Sender: TObject);
 begin
-  var
-    TurmasPage := TTurmasPage.Create(Self);
     TurmasPage.Show;
 end;
 

@@ -7,7 +7,7 @@ uses
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.Grids,
   Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, ADODB, Vcl.Mask,
   System.Generics.Collections, Vcl.ComCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls,
-  oldDataModulePG;
+  oldDataModulePG, Datasnap.DBClient;
 
 type
   TProfessoresPage = class(TForm)
@@ -28,25 +28,29 @@ type
     DBEdit3: TDBEdit;
     DBEdit5: TDBEdit;
     DBEdit6: TDBEdit;
-    DBGridMatriculas: TDBGrid;
-    dbedtCPFProfessor: TDBEdit;
-    dbedtCodProfessor: TDBEdit;
-    ToolBar2: TToolBar;
-    dbedtNomeProfessor: TDBEdit;
+    DBGridProfessores: TDBGrid;
     ToolBar1: TToolBar;
     spdbtnInclu: TSpeedButton;
     spdbtnEditar: TSpeedButton;
     spdbtnExcluir: TSpeedButton;
     spdbtnSalvar: TSpeedButton;
     DataSourceProfessores: TDataSource;
+    ClientDataSetProfs: TClientDataSet;
+    ClientDataSetProfscodigo_professor: TStringField;
+    ClientDataSetProfsnome_professor: TStringField;
+    ClientDataSetProfscpf: TStringField;
+    DBEdit1: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit7: TDBEdit;
     procedure spdbtnIncluClick(Sender: TObject);
     procedure spdbtnSalvarClick(Sender: TObject);
     procedure spdbtnEditarClick(Sender: TObject);
     procedure spdbtnExcluirClick(Sender: TObject);
-//    procedure RedEstudClick(Sender: TObject);
-//    procedure RedDisciClick(Sender: TObject);
-//    procedure RedTurmasClick(Sender: TObject);
-//    procedure RedMatriClick(Sender: TObject);
+    procedure ToolBar1Click(Sender: TObject);
+//    procedure spdbtnIncluClick(Sender: TObject);
+//    procedure spdbtnSalvarClick(Sender: TObject);
+//    procedure spdbtnEditarClick(Sender: TObject);
+//    procedure spdbtnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,34 +58,56 @@ type
   end;
 
 var
-  ProfessoresPage: TProfessoresPage;
+      ProfessoresPage: TProfessoresPage;
+
+      codigo_professor: String;
+      nome_professor: String;
+      cpf: String;
 
 implementation
 
 {$R *.dfm}
 
-uses unitTurmas;
-
 //Botões
 
 procedure TProfessoresPage.spdbtnEditarClick(Sender: TObject);
 begin
-     dm.QueryProfessores.Edit;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Edit;
+  StrToInt(codigo_professor);
+  StrToInt(cpf);
 end;
 
 procedure TProfessoresPage.spdbtnExcluirClick(Sender: TObject);
 begin
-     dm.QueryProfessores.Delete;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Delete;
 end;
 
 procedure TProfessoresPage.spdbtnIncluClick(Sender: TObject);
 begin
-    dm.QueryProfessores.Insert;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Insert;
 end;
 
 procedure TProfessoresPage.spdbtnSalvarClick(Sender: TObject);
 begin
-    dm.QueryProfessores.Post;
+  spdbtnInclu.Enabled:= true;
+  spdbtnEditar.Enabled:= true;
+  spdbtnSalvar.Enabled := false;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Post;
+end;
+
+procedure TProfessoresPage.ToolBar1Click(Sender: TObject);
+begin
+  var teste:='';
 end;
 
 end.
