@@ -48,6 +48,7 @@ object Form1: TForm1
       Top = 160
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Estudantes'
       Color = clBisque
       ParentBackground = False
@@ -59,6 +60,7 @@ object Form1: TForm1
       Top = 160
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Matr'#237'culas'
       Color = clBisque
       ParentBackground = False
@@ -70,6 +72,7 @@ object Form1: TForm1
       Top = 160
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Professores'
       Color = clBisque
       ParentBackground = False
@@ -81,6 +84,7 @@ object Form1: TForm1
       Top = 216
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Disciplinas'
       Color = clBisque
       ParentBackground = False
@@ -92,6 +96,7 @@ object Form1: TForm1
       Top = 216
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Turmas'
       Color = clBisque
       ParentBackground = False
@@ -103,6 +108,7 @@ object Form1: TForm1
       Top = 216
       Width = 129
       Height = 33
+      Cursor = crHandPoint
       Caption = 'Ajuda'
       Color = clBisque
       ParentBackground = False

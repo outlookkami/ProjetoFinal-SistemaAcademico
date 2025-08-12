@@ -89,7 +89,7 @@ object DisciplinasPage: TDisciplinasPage
       TabOrder = 0
     end
     object RedMatri: TPanel
-      Left = 495
+      Left = 503
       Top = 573
       Width = 129
       Height = 33
@@ -130,6 +130,7 @@ object DisciplinasPage: TDisciplinasPage
       Width = 655
       Height = 313
       Cursor = crHandPoint
+      DataSource = DataSourceDisciplinas
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgTitleClick, dgTitleHotTrack]
       TabOrder = 4
       TitleFont.Charset = DEFAULT_CHARSET
@@ -160,6 +161,7 @@ object DisciplinasPage: TDisciplinasPage
       Width = 121
       Height = 23
       DataField = 'nome_disciplina'
+      DataSource = DataSourceDisciplinas
       TabOrder = 5
     end
     object dbedtCodDisciplina: TDBEdit
@@ -168,6 +170,7 @@ object DisciplinasPage: TDisciplinasPage
       Width = 121
       Height = 23
       DataField = 'codigo_disciplina'
+      DataSource = DataSourceDisciplinas
       TabOrder = 6
       TextHint = '00000'
     end
@@ -182,8 +185,8 @@ object DisciplinasPage: TDisciplinasPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 336
-      Top = 67
+      Left = 294
+      Top = 35
       Width = 360
       Height = 31
       Align = alCustom
@@ -196,6 +199,8 @@ object DisciplinasPage: TDisciplinasPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 8
+      ExplicitLeft = 291
+      ExplicitTop = 32
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0
@@ -235,13 +240,7 @@ object DisciplinasPage: TDisciplinasPage
   end
   object DataSourceDisciplinas: TDataSource
     DataSet = DM.QueryDisciplinas
-    Left = 648
-    Top = 88
-  end
-  object ClientDataSet1: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    Left = 632
-    Top = 152
+    Left = 624
+    Top = 120
   end
 end

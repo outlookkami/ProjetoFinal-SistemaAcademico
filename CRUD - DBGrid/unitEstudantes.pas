@@ -48,7 +48,6 @@ type
       codigo_estudante: String;
       nome_estudante: String;
 
-      listaEstudantes: TObjectList<TEstudantesPage>;
   end;
 
 var
@@ -59,24 +58,56 @@ implementation
 {$R *.dfm}
 
 //Botões
-procedure TEstudantesPage.spdbtnEditarClick(Sender: TObject);
+//procedure TEstudantesPage.spdbtnEditarClick(Sender: TObject);
+//begin
+//   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Edit;
+//end;
+//
+//procedure TEstudantesPage.spdbtnExcluirClick(Sender: TObject);
+//begin
+//   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Delete;
+//end;
+//
+//procedure TEstudantesPage.spdbtnIncluClick(Sender: TObject);
+//begin
+//   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Insert;
+//end;
+//
+//procedure TEstudantesPage.spdbtnSalvarClick(Sender: TObject);
+//begin
+//   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Post;
+//end;
+
+ procedure TEstudantesPage.spdbtnEditarClick(Sender: TObject);
 begin
-   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Edit;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryEstudantes.Open;
+  dm.QueryEstudantes.Edit;
 end;
 
 procedure TEstudantesPage.spdbtnExcluirClick(Sender: TObject);
 begin
-   if (dm<>nil) and (dm.QueryEstudantes<>nil) then  dm.QueryEstudantes.Delete;
+  dm.QueryEstudantes.Open;
+  dm.QueryEstudantes.Delete;
 end;
 
 procedure TEstudantesPage.spdbtnIncluClick(Sender: TObject);
 begin
-  if (dm<>nil) and (dm.QueryEstudantes<>nil) then  dm.QueryEstudantes.Insert;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryEstudantes.Open;
+  dm.QueryEstudantes.Insert;
 end;
 
 procedure TEstudantesPage.spdbtnSalvarClick(Sender: TObject);
 begin
-   if (dm<>nil) and (dm.QueryEstudantes<>nil) then dm.QueryEstudantes.Post;
+  spdbtnInclu.Enabled:= true;
+  spdbtnEditar.Enabled:= true;
+  spdbtnSalvar.Enabled := false;
+  dm.QueryEstudantes.Open;
+  dm.QueryEstudantes.Post;
 end;
-
 end.

@@ -50,8 +50,6 @@ type
       codigo_matricula: String;
       codigo_turma: String;
       codigo_estudante: String;
-
-      listaMatriculas: TObjectList<TMatriculasPage>;
   end;
 
 var
@@ -71,22 +69,34 @@ end;
 
 procedure TMatriculasPage.spdbtnEditarClick(Sender: TObject);
 begin
-     dm.QueryMatriculas.Edit;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryMatriculas.Open;
+  dm.QueryMatriculas.Edit;
 end;
 
 procedure TMatriculasPage.spdbtnExcluirClick(Sender: TObject);
 begin
-     dm.QueryMatriculas.Delete;
+  dm.QueryMatriculas.Open;
+  dm.QueryMatriculas.Delete;
 end;
 
 procedure TMatriculasPage.spdbtnIncluClick(Sender: TObject);
 begin
-    dm.QueryMatriculas.Insert;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryMatriculas.Open;
+  dm.QueryMatriculas.Insert;
 end;
 
 procedure TMatriculasPage.spdbtnSalvarClick(Sender: TObject);
 begin
-    dm.QueryMatriculas.Post;
+  spdbtnInclu.Enabled:= true;
+  spdbtnEditar.Enabled:= true;
+  spdbtnSalvar.Enabled := false;
+  dm.QueryMatriculas.Open;
+  dm.QueryMatriculas.Post;
 end;
-
 end.

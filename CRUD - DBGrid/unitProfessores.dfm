@@ -220,7 +220,6 @@ object ProfessoresPage: TProfessoresPage
       HotTrackColor = clSkyBlue
       ParentColor = False
       TabOrder = 9
-      OnClick = ToolBar1Click
       object spdbtnInclu: TSpeedButton
         Left = 0
         Top = 0

@@ -46,11 +46,7 @@ type
     procedure spdbtnSalvarClick(Sender: TObject);
     procedure spdbtnEditarClick(Sender: TObject);
     procedure spdbtnExcluirClick(Sender: TObject);
-    procedure ToolBar1Click(Sender: TObject);
-//    procedure spdbtnIncluClick(Sender: TObject);
-//    procedure spdbtnSalvarClick(Sender: TObject);
-//    procedure spdbtnEditarClick(Sender: TObject);
-//    procedure spdbtnExcluirClick(Sender: TObject);
+    //procedure ToolBar1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -77,8 +73,6 @@ begin
   spdbtnSalvar.Enabled := true;
   dm.QueryProfessores.Open;
   dm.QueryProfessores.Edit;
-  StrToInt(codigo_professor);
-  StrToInt(cpf);
 end;
 
 procedure TProfessoresPage.spdbtnExcluirClick(Sender: TObject);
@@ -104,10 +98,4 @@ begin
   dm.QueryProfessores.Open;
   dm.QueryProfessores.Post;
 end;
-
-procedure TProfessoresPage.ToolBar1Click(Sender: TObject);
-begin
-  var teste:='';
-end;
-
 end.

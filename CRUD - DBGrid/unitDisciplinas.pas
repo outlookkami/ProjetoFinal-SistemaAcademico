@@ -11,7 +11,6 @@ uses
 type
   TDisciplinasPage = class(TForm)
     DataSourceDisciplinas: TDataSource;
-    ClientDataSet1: TClientDataSet;
     pnlDisciplinas: TPanel;
     lblTituloDisciplinas: TLabel;
     Label2: TLabel;
@@ -37,7 +36,6 @@ type
     procedure spdbtnSalvarClick(Sender: TObject);
     procedure spdbtnEditarClick(Sender: TObject);
     procedure spdbtnExcluirClick(Sender: TObject);
-    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
   private
     { Private declarations }
   public
@@ -55,34 +53,37 @@ implementation
 {$R *.dfm}
 
 // Botões
-procedure TDisciplinasPage.DBNavigator1Click(Sender: TObject;
-  Button: TNavigateBtn);
-begin
-    // DBNavigator1.Insert;
-end;
 
 procedure TDisciplinasPage.spdbtnEditarClick(Sender: TObject);
 begin
-     dm.QueryDisciplinas.Open;
-     dm.QueryDisciplinas.Edit;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryDisciplinas.Open;
+  dm.QueryDisciplinas.Edit;
 end;
 
 procedure TDisciplinasPage.spdbtnExcluirClick(Sender: TObject);
 begin
-     dm.QueryDisciplinas.Open;
-     dm.QueryDisciplinas.Delete;
+  dm.QueryDisciplinas.Open;
+  dm.QueryProfessores.Delete;
 end;
 
 procedure TDisciplinasPage.spdbtnIncluClick(Sender: TObject);
 begin
-    dm.QueryDisciplinas.Open;
-    dm.QueryDisciplinas.Insert;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryDisciplinas.Open;
+  dm.QueryDisciplinas.Insert;
 end;
 
 procedure TDisciplinasPage.spdbtnSalvarClick(Sender: TObject);
 begin
-    dm.QueryDisciplinas.Open;
-    dm.QueryDisciplinas.Post;
+  spdbtnInclu.Enabled:= true;
+  spdbtnEditar.Enabled:= true;
+  spdbtnSalvar.Enabled := false;
+  dm.QueryDisciplinas.Open;
+  dm.QueryDisciplinas.Post;
 end;
-
 end.

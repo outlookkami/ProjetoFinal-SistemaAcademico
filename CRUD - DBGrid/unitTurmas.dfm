@@ -90,8 +90,8 @@ object TurmasPage: TTurmasPage
     end
     object ToolBar1: TToolBar
       AlignWithMargins = True
-      Left = 278
-      Top = 47
+      Left = 284
+      Top = 53
       Width = 360
       Height = 35
       Align = alCustom
@@ -151,7 +151,6 @@ object TurmasPage: TTurmasPage
       Color = clBisque
       ParentBackground = False
       TabOrder = 0
-      OnClick = RedEstudClick
     end
     object RedMatri: TPanel
       Left = 455

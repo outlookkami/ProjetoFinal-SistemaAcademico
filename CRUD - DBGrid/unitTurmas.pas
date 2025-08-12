@@ -6,8 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.Grids,
   Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, ADODB, Vcl.Mask, System.Generics.Collections,
-  Vcl.ComCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, oldDataModulePG, unitProfessores, unitDisciplinas,
-  unitEstudantes, unitMatriculas;
+  Vcl.ComCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, oldDataModulePG;
 
 type
   TTurmasPage = class(TForm)
@@ -45,11 +44,6 @@ type
     procedure spdbtnEditarClick(Sender: TObject);
     procedure spdbtnExcluirClick(Sender: TObject);
     procedure spdbtnSalvarClick(Sender: TObject);
-    procedure RedEstudClick(Sender: TObject);
-//    procedure RedEstudClick(Sender: TObject);
-//    procedure RedDisciClick(Sender: TObject);
-//    procedure RedMatriClick(Sender: TObject);
-//    procedure RedProfsClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -59,8 +53,6 @@ type
       codigo_turma: String;
       codigo_professor: String; //Vai receber o código do Professor da uProfessor
       codigo_disciplina: String; //Vai receber o código da Disciplina da uDisciplina
-
-      listaTurmas: TObjectList<TTurmasPage>;
   end;
 
   var TurmasPage:TTurmasPage;
@@ -80,31 +72,38 @@ begin
      DBGridTurmas.DataSource := DataSourceTurmas;
 end;
 
-procedure TTurmasPage.RedEstudClick(Sender: TObject);
-begin
-
-end;
-
 // Botões
-
 procedure TTurmasPage.spdbtnEditarClick(Sender: TObject);
 begin
-     dm.QueryTurmas.Edit;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Edit;
 end;
 
 procedure TTurmasPage.spdbtnExcluirClick(Sender: TObject);
 begin
-     dm.QueryTurmas.Delete;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Delete;
 end;
 
 procedure TTurmasPage.spdbtnIncluClick(Sender: TObject);
 begin
-    dm.QueryTurmas.Insert;
+  spdbtnInclu.Enabled:= false;
+  spdbtnEditar.Enabled:= false;
+  spdbtnSalvar.Enabled := true;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Insert;
 end;
 
 procedure TTurmasPage.spdbtnSalvarClick(Sender: TObject);
 begin
-    dm.QueryTurmas.Post;
+  spdbtnInclu.Enabled:= true;
+  spdbtnEditar.Enabled:= true;
+  spdbtnSalvar.Enabled := false;
+  dm.QueryProfessores.Open;
+  dm.QueryProfessores.Post;
 end;
 
 end.
