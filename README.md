@@ -1,9 +1,9 @@
 # ProjetoFinal-SistemaAcademico
 
-###Nome: Kamilly Thauanny da Silva Souza
-###Nome do projeto: CRUD - DBGrid
-###Descrição do sistema: sistema simples que está permitindo inserção, exclusão, edição e salvamento de registros nas páginas de estudantes, professores, e disciplinas. 
-###Entidades relacionadas: 
+##Nome: Kamilly Thauanny da Silva Souza
+##Nome do projeto: CRUD - DBGrid
+##Descrição do sistema: sistema simples que está permitindo inserção, exclusão, edição e salvamento de registros nas páginas de estudantes, professores, e disciplinas. 
+##Entidades relacionadas: 
 PostgreSQL:
   Tabelas: 
     disciplinas --> codigo_disciplina(pkey), nome_disciplina(not null)
